@@ -1,0 +1,44 @@
+.landing-container{
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.landing-left{
+  flex-basis: 60%;
+  height: 100%;
+  display: flex;
+}
+
+.landing-left-content{
+  padding: 0 50px;
+  max-width: 60%;
+  margin-top: 25%;
+}
+
+.landing-right{
+  flex-basis: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.learn-more{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 30px;
+}
+
+.cool-button{
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 0;
+  font-weight: bold;
+  background-color: #272424;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+}
