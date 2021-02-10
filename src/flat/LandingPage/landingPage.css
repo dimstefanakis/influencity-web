@@ -6,16 +6,27 @@
   position: relative;
 }
 
+.landing-second-container{
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .landing-left{
   flex-basis: 60%;
   height: 100%;
   display: flex;
 }
 
-.landing-left-content{
+.landing-text-content{
   padding: 0 50px;
   max-width: 60%;
-  margin-top: 25%;
+  margin-top: 30%;
+  position: relative;
+}
+
+.landing-text-content h1{
+  margin-top: 0;
 }
 
 .landing-right{
@@ -23,6 +34,8 @@
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-color: #aaf0d1;
 }
 
 .learn-more{
@@ -38,7 +51,105 @@
   border-radius: 20px;
   border: 0;
   font-weight: bold;
-  background-color: #272424;
-  color: white;
+  background-color: #ffd29b;
+  color: black;
   font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.secondary-screen-wrapper{
+  position: absolute;
+  left: -40%;
+  top: 0;
+  width: 45%;
+}
+
+.online-learning-illustration-container{
+  display: flex;
+  flex-basis: 60%;
+  height: 100%;
+  background-color: #aaf0d1;
+  align-items: center;
+  order: 0;
+  border-bottom-right-radius: 15px;
+}
+
+.what-is-it-about-container{
+  display: flex;
+  flex-basis: 40%;
+  height: 100%;
+  position: relative;
+  order: 1;
+}
+
+/* These dimensions work with a 2.026 ratio*/
+.image-in-phone{
+  width: 96%;
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px; 
+}
+@media all and (max-width: 767px){
+  .landing-container{
+    flex-flow: column;
+    height: auto;
+  }
+
+  .landing-second-container{
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .landing-text-content{
+    max-width: 100%;
+    margin-top: 70px;
+  }
+
+  .what-is-it-about-container .landing-text-content{
+    margin-bottom: 70px;
+  }
+
+  .landing-right{
+    flex-basis: auto;
+    height: 100vh;
+  }
+
+  .learn-more{
+    display: none;
+  }
+
+  .what-is-it-about-container{
+    order: 0;
+    flex-basis: 100%;
+    height: auto;
+  }
+
+  .online-learning-illustration-container{
+    border-bottom-right-radius: 0;
+    order: 1;
+    flex-basis: 100%;
+    height: auto;
+    padding: 10%;
+  }
+
+  .online-learning-illustration-container > svg{
+    width: 100% !important;
+    height: 100%;
+    max-width: 100% !important;
+  }
+}
+
+@media all and (max-width: 1200px){
+  .secondary-screen-wrapper{
+    display: none;
+  }
+  
+  .online-learning-illustration-container > svg{
+    width: 100%;
+    height: 100%;
+    max-width: 100% !important;
+  }
 }

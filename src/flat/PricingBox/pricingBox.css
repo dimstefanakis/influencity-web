@@ -1,0 +1,11 @@
+.pricing-box{
+  height: 100%;
+  width: 25%;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}

@@ -1,13 +1,13 @@
 function PrimaryPhone(props) {
   return (
-    <svg width={347} height={682} viewBox="0 0 347 682" fill="none" {...props}>
+    <svg width={463} height={932} viewBox="0 0 463 932" fill="none" {...props}>
       <g filter="url(#filter0_d)">
-        <rect x={4} width={339} height={674} rx={28} fill="#fff" />
+        <rect x={4} width={455} height={924} rx={28} fill="#fff" />
         <rect
           x={6}
           y={2}
-          width={335}
-          height={670}
+          width={451}
+          height={920}
           rx={26}
           stroke="#000"
           strokeWidth={4}
@@ -18,8 +18,8 @@ function PrimaryPhone(props) {
           id="filter0_d"
           x={0}
           y={0}
-          width={347}
-          height={682}
+          width={463}
+          height={932}
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
