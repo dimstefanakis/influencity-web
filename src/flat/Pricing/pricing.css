@@ -1,5 +1,5 @@
 .pricing-container{
-  height: 70vh;
+  min-height: 70vh;
   width: 100%;
   background-color: #212121;
   display: flex;
@@ -8,6 +8,7 @@
   text-align: center;
   margin-top: 100px;
   min-width: 300px;
+  padding-bottom: 100px;
 }
 
 .pricing-list{

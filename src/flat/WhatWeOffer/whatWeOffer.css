@@ -38,15 +38,22 @@
   background-color: #ffd29b;
   margin-bottom: 20px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .offer-selector-button{
+  cursor: pointer;
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: black;
   font-weight: bold;
+  transition: all 0.2s;
+}
+
+.offer-selector-button:hover{
+  font-size: 1.1rem;
 }
 
 .points-container{
