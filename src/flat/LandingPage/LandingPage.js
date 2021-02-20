@@ -8,6 +8,7 @@ import PrimaryPhone from '../Svgs/PrimaryPhone';
 import OnlineLearningIllustration from '../Svgs/OnlineLearningIllustration';
 import Header from '../Header';
 import Pricing from '../Pricing';
+import SubscribeForm from '../SignUpForm';
 import './landingPage.css';
 
 const pages = [
@@ -62,6 +63,12 @@ function LandingPage() {
     leave: { opacity: 0, transform: 'translate3d(-50%,0,0)' },
   });
 
+  function handleLearnMoreClick() {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth',
+    });
+  }
   return (
     <div style={{ width: '100%', height: '100%' }}>
       <Header />
@@ -82,7 +89,7 @@ function LandingPage() {
             <PrimaryPhone style={{ width: '100%', height: '70%' }} />
           </div>
         </div>
-        <button className="learn-more cool-button" type="button">
+        <button className="learn-more cool-button" type="button" onClick={handleLearnMoreClick}>
           learn more
         </button>
       </div>
@@ -96,15 +103,14 @@ function LandingPage() {
             <h3 style={{ fontWeight: 500 }}>
               Troosh is a mentoring app which primarily focuses on a closer interaction
               between role models and users. It is an innovative type of service where
-              users can join their favorite influencers and have access to exclusive
+              users can join their favorite role models and have access to exclusive
               content that would not be otherwise publicly available.
-
             </h3>
-            <h3 style={{ fontWeight: 500 }}>
+            {/* <h3 style={{ fontWeight: 500 }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Quisque metus sem, dictum eu sem et, ultricies tincidunt velit.
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </h3>
+            </h3> */}
             <div className="secondary-screen-wrapper" onClick={onClick}>
               {transitions((style, item) => {
                 const Image = pages[item];
@@ -117,6 +123,13 @@ function LandingPage() {
         </div>
       </div>
       <WhatWeOffer />
+      <div style={{
+        display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexFlow: 'column',
+      }}
+      >
+        <SubscribeForm />
+      </div>
+
       <Pricing />
     </div>
   );
