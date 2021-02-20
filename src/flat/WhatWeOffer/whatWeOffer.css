@@ -73,11 +73,14 @@
   0 0.8px 1.5px rgba(0, 0, 0, 0.025),
   0 1.8px 3.6px rgba(0, 0, 0, 0.033),
   0 6px 12px rgba(0, 0, 0, 0.05);
-  height: 120px;
+  box-sizing: border-box;
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
   border: 3px solid #aaf0d1;
+  min-width: 200px;
+  flex: 1;
+  margin: 20px;
 }

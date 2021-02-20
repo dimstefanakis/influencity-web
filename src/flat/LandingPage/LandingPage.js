@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable max-len */
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { useTransition, animated } from 'react-spring';
 import WhatWeOffer from '../WhatWeOffer/index';
 import PrimaryPhone from '../Svgs/PrimaryPhone';
@@ -24,6 +24,14 @@ const pages = [
       ...style, position: 'absolute', height: '100%', width: '100%',
     }}
     >
+      <img src={`${process.env.PUBLIC_URL}/5thimage.png`} className="image-in-phone" alt="1s" />
+    </animated.div>
+  ),
+  ({ style }) => (
+    <animated.div style={{
+      ...style, position: 'absolute', height: '100%', width: '100%',
+    }}
+    >
       <img src={`${process.env.PUBLIC_URL}/3rdimage.png`} className="image-in-phone" alt="1s" />
     </animated.div>
   ),
@@ -35,19 +43,18 @@ const pages = [
       <img src={`${process.env.PUBLIC_URL}/4thimage.png`} className="image-in-phone" alt="1s" />
     </animated.div>
   ),
-  ({ style }) => (
-    <animated.div style={{
-      ...style, position: 'absolute', height: '100%', width: '100%',
-    }}
-    >
-      <img src={`${process.env.PUBLIC_URL}/5thimage.png`} className="image-in-phone" alt="1s" />
-    </animated.div>
-  ),
 ];
 
 function LandingPage() {
   const [index, setIndex] = useState(0);
   const onClick = useCallback(() => setIndex((state) => (state + 1) % 4), []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((state) => (state + 1) % 4);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const transitions = useTransition(index, {
     from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
@@ -85,14 +92,6 @@ function LandingPage() {
         </div>
         <div className="what-is-it-about-container">
           <div className="landing-text-content">
-            <div className="secondary-screen-wrapper" onClick={onClick}>
-              {transitions((style, item) => {
-                const Image = pages[item];
-                return <Image style={style} />;
-              })}
-              {/* <img src={`${process.env.PUBLIC_URL}/3rdimage.png`} className="image-in-phone" alt="1s" /> */}
-              <PrimaryPhone style={{ width: '100%', height: '70%' }} />
-            </div>
             <h1>What is it about</h1>
             <h3 style={{ fontWeight: 500 }}>
               Troosh is a mentoring app which primarily focuses on a closer interaction
@@ -106,6 +105,14 @@ function LandingPage() {
               Quisque metus sem, dictum eu sem et, ultricies tincidunt velit.
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </h3>
+            <div className="secondary-screen-wrapper" onClick={onClick}>
+              {transitions((style, item) => {
+                const Image = pages[item];
+                return <Image style={style} />;
+              })}
+              {/* <img src={`${process.env.PUBLIC_URL}/3rdimage.png`} className="image-in-phone" alt="1s" /> */}
+              <PrimaryPhone style={{ width: '100%', height: '70%' }} />
+            </div>
           </div>
         </div>
       </div>

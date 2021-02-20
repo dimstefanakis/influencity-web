@@ -3,7 +3,6 @@ import {
 } from 'react-spring/web.cjs';
 
 function ChainedBoxes({ data, transRef, phase }) {
-  console.log(phase);
   // check phase
   // if its leaving and show/hide items accordingly
   // use phase as an "open" variable from the docs

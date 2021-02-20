@@ -36,7 +36,7 @@ function WhatWeOffer() {
       <h1 style={{ maxWidth: 300, textAlign: 'center', margin: 60 }}>The best place to start any skill</h1>
       <div className="what-we-offer-content-container">
         <div className="offer-selector">
-          <div className="offer-selector-button" style={{ backgroundColor: index === 0 ? '#efb46c' : null }} onClick={() => setIndex(0)} role="tab">For you</div>
+          <div className="offer-selector-button" style={{ backgroundColor: index === 0 ? '#efb46c' : null }} onClick={() => setIndex(0)} role="tab">For mentees</div>
           <div className="offer-selector-button" style={{ backgroundColor: index === 1 ? '#efb46c' : null }} onClick={() => setIndex(1)} role="tab">For mentors</div>
         </div>
         {transitions((style, item, t) => {
