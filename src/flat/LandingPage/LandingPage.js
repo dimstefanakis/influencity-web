@@ -3,6 +3,7 @@
 /* eslint-disable max-len */
 import { useState, useCallback, useEffect } from 'react';
 import { useTransition, animated } from 'react-spring';
+import { Helmet } from 'react-helmet';
 import WhatWeOffer from '../WhatWeOffer/index';
 import PrimaryPhone from '../Svgs/PrimaryPhone';
 import OnlineLearningIllustration from '../Svgs/OnlineLearningIllustration';
@@ -71,6 +72,12 @@ function LandingPage() {
   }
   return (
     <div style={{ width: '100%', height: '100%' }}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Troosh</title>
+        <link rel="canonical" href="https://troosh.app" />
+        <meta name="description" content="The best place to start any skill. Start learning today affordably with the innovative application, affordably." />
+      </Helmet>
       <Header />
       <div className="landing-container">
         <div className="landing-left">

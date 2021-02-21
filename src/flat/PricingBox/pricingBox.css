@@ -28,3 +28,13 @@
 .pro-list li{
   margin-top: 5px;
 }
+
+.pricing-description{
+  margin: 0 20%;
+}
+
+@media all and (max-width: 480px){
+  .pricing-description{
+    margin: 0 10%;
+  }
+}

@@ -81,6 +81,13 @@
   font-size: 1.2rem;
   border: 3px solid #aaf0d1;
   min-width: 200px;
+  min-height: 200px;
   flex: 1;
   margin: 20px;
+}
+
+@media all and (max-width: 480px){
+  .point-box{
+    margin: 20px 0;
+  }
 }

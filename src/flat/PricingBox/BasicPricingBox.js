@@ -6,7 +6,7 @@ function BasicPricingBox() {
         <h1 style={{ marginBottom: 0 }}>$4.99</h1>
         <h3 style={{ marginTop: 0, color: 'gray' }}>/month</h3>
       </div>
-      <p style={{ margin: '0 20%' }}>
+      <p className="pricing-description">
         Start learning affordably. This is the best choice for those
         who are just getting started learning new skills.
       </p>

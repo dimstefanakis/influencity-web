@@ -5,7 +5,7 @@ function FreePricingBox() {
       <div>
         <h1>FREE</h1>
       </div>
-      <p style={{ margin: '0 20%' }}>
+      <p className="pricing-description">
         Free forever.
         Check out what each mentor has to offer and decide
         if they are the perfect fit for your needs!
