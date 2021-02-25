@@ -32,10 +32,11 @@ body{
   overflow-x: hidden;
 }
 
-.landing-text-content{
-  overflow-x: hidden;
+@media all and (max-width: 767px){
+  .landing-text-content{
+    overflow-x: hidden;
+  }  
 }
-
 
 @keyframes App-logo-spin {
   from {
