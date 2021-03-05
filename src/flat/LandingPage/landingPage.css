@@ -56,6 +56,7 @@
   font-family: 'Nunito', sans-serif;
   font-size: 1rem;
   cursor: pointer;
+  max-width: 150px;
 }
 
 .secondary-screen-wrapper{
