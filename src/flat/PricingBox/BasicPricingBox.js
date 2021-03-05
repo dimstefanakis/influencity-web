@@ -3,7 +3,7 @@ function BasicPricingBox() {
     <>
       <h2>Basic tier</h2>
       <div style={{ display: 'flex', flexFlow: 'row', alignItems: 'baseline' }}>
-        <h1 style={{ marginBottom: 0 }}>$4.99</h1>
+        <h1 style={{ marginBottom: 0 }}>{(4.99).toLocaleString('en-US', { style: 'currency', currency: 'EUR' })}</h1>
         <h3 style={{ marginTop: 0, color: 'gray' }}>/month</h3>
       </div>
       <p className="pricing-description">
