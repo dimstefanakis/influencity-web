@@ -76,7 +76,7 @@ function LandingPage() {
         <meta charSet="utf-8" />
         <title>Troosh</title>
         <link rel="canonical" href="https://troosh.app" />
-        <meta name="description" content="The best place to start any skill. Start learning today affordably with the innovative application, affordably." />
+        <meta name="description" content="The best place to start any skill. Start learning today with the innovative application, affordably." />
       </Helmet>
       <Header />
       <div className="landing-container">
