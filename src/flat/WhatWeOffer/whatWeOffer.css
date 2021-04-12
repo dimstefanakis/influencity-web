@@ -38,17 +38,33 @@
   background-color: #ffd29b;
   margin-bottom: 20px;
   border-radius: 10px;
-  overflow: hidden;
 }
 
 .offer-selector-button{
   cursor: pointer;
+  position: relative;
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: black;
   font-weight: bold;
+  transition: all 0.2s;
+}
+
+.offer-selector-border-left{
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: solid;
+  border-right-width: 0 !important;
+  transition: all 0.2s;
+}
+
+.offer-selector-border-right{
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border: solid;
+  border-left-width: 0 !important;
   transition: all 0.2s;
 }
 

@@ -36,8 +36,46 @@ function WhatWeOffer() {
       <h1 style={{ maxWidth: 300, textAlign: 'center', margin: 60 }}>The best place to start any skill</h1>
       <div className="what-we-offer-content-container">
         <div className="offer-selector">
-          <div className="offer-selector-button" style={{ backgroundColor: index === 0 ? '#efb46c' : null }} onClick={() => setIndex(0)} role="tab">For mentees</div>
-          <div className="offer-selector-button" style={{ backgroundColor: index === 1 ? '#efb46c' : null }} onClick={() => setIndex(1)} role="tab">For mentors</div>
+          <div
+            className="offer-selector-button"
+            style={{ backgroundColor: index === 0 ? '#efb46c' : '#ffd29b', borderTopLeftRadius: 10, borderBottomLeftRadius: 10 }}
+            onClick={() => setIndex(0)}
+            role="tab"
+          >
+            <span>For mentees</span>
+            <div
+              className="offer-selector-border-left"
+              style={{
+                position: 'absolute',
+                right: 0,
+                width: '101%',
+                height: '110%',
+                borderColor: index === 0 ? '#efb46c' : '#ffd29b',
+                opacity: index === 0 ? 1 : 0,
+                borderWidth: 5,
+              }}
+            />
+          </div>
+          <div
+            className="offer-selector-button"
+            style={{ backgroundColor: index === 1 ? '#efb46c' : '#ffd29b', borderTopRightRadius: 10, borderBottomRightRadius: 10 }}
+            onClick={() => setIndex(1)}
+            role="tab"
+          >
+            <span>For mentors</span>
+            <div
+              className="offer-selector-border-right"
+              style={{
+                position: 'absolute',
+                left: 0,
+                width: '101%',
+                height: '110%',
+                borderColor: index === 0 ? '#ffd29b' : '#efb46c',
+                opacity: index === 0 ? 0 : 1,
+                borderWidth: 5,
+              }}
+            />
+          </div>
         </div>
         {transitions((style, item, t) => {
           if (item === 0) {
