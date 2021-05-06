@@ -1,0 +1,23 @@
+.feature-image-container{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 40%;
+}
+
+.side-by-side-image{
+  height: 70%;
+  z-index: 1;
+  max-height: 70vh;
+}
+
+@media all and (max-width: 767px){
+  .side-by-side{
+    flex-flow: column !important;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+}

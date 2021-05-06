@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+.full{
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -35,7 +41,11 @@ body{
 @media all and (max-width: 767px){
   .landing-text-content{
     overflow-x: hidden;
-  }  
+  }
+
+  .full{
+    height: auto;
+  }
 }
 
 @keyframes App-logo-spin {

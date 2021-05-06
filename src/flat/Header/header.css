@@ -7,10 +7,19 @@
   display: flex;
   flex-flow: row;
   align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
 
 .logo{
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.header-link{
   margin: 0 40px;
-  width: 60px;
-  height: 60px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  cursor: pointer;
 }
