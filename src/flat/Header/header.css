@@ -24,3 +24,16 @@
   font-size: 1.3rem;
   cursor: pointer;
 }
+
+.header-content{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@media all and (max-width: 767px){
+  .header-content{
+    width: 80%;
+  }  
+}

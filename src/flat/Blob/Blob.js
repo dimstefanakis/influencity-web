@@ -1,4 +1,4 @@
-function Blob({ style = {}, color = '#FFD29B' }) {
+export function Blob({ style = {}, color = '#FFD29B' }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" style={{ height: '100%', ...style }} viewBox="0 0 200 200">
       <path
@@ -9,4 +9,24 @@ function Blob({ style = {}, color = '#FFD29B' }) {
   );
 }
 
-export default Blob;
+export function Blob2({ style = {}, color = '#FFD29B' }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" style={{ height: '100%', ...style }} viewBox="0 0 200 200">
+      <path
+        fill={color}
+        d="M149.4 55c12.2 7.9 18 26.4 13.3 40.3-4.7 13.8-20.1 22.9-32.3 37.4-12.2 14.5-21.3 34.4-31.3 35.3-10 .9-20.9-17.2-28.8-31.7-7.8-14.5-12.7-25.4-15.7-39.3-2.9-13.9-4.1-30.7 3.8-38.6 7.9-7.8 24.7-6.6 42.4-7.5 17.8-.8 36.3-3.7 48.6 4.1z"
+      />
+    </svg>
+  );
+}
+
+export function Blob3({ style = {}, color = '#FFD29B' }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" style={{ height: '100%', ...style }} viewBox="0 0 200 200">
+      <path
+        fill={color}
+        d="M127.6 66.7c9 14.8 17.8 24 21.4 36.9 3.7 12.9 2.1 29.4-6.9 40.6-9.1 11.1-25.6 16.9-38.4 13.3-12.8-3.7-21.9-16.9-34.2-28.1-12.4-11.2-27.8-20.3-31.3-32.8-3.4-12.6 5.3-28.5 17.6-43.3C68.1 38.6 84 25 96.7 28.4c12.6 3.3 21.8 23.6 30.9 38.3z"
+      />
+    </svg>
+  );
+}

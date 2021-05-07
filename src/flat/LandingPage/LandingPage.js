@@ -90,7 +90,7 @@ function LandingPage() {
             <div className="hero-text-container">
               <div className="hero-inner-container">
                 <h1 className="hero-header">
-                  The most interactive coaching app
+                  The most interactive mentoring app
                 </h1>
                 <h2 style={{ maxWidth: 400, fontWeight: 300 }}>Get started on any skill affordably, as learning should be</h2>
                 <div>
@@ -119,7 +119,7 @@ function LandingPage() {
         </button>
       </div>
       <BetweenHeader title="Get the most innovative learning experience" quote="Online learning requires 40-60% less time to learn" />
-      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koam9nna.png`} side="right" title="Learn new skills" details="Get started on a selection of mediums and find the coach that suits you" />
+      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koam9nna.png`} side="right" title="Learn new skills" details="Get started on a selection of mediums and find the mentor that suits you" />
       <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koaml62o.png`} side="left" title="Join projects" details="Practice is the key to success. Projects let you hone your skills and get practical experience solo or on a team, with the guidance of your mentor" />
       <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koaq867p.png`} side="right" title="Get awarded" details="Perform well and get awarded for your progess" />
       <BetweenHeader title="What's in it for mentors?" quote="The online learning industry is projected to pass $370 billion by 2026" />

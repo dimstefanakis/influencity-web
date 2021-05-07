@@ -1,12 +1,14 @@
 import FaqItem from '../FaqItem';
+import faqItems from './items';
 import './faq.css';
 
 function Faq() {
   return (
     <div className="faq-container">
       <div className="faq">
-        <FaqItem title="Frequently asked question" details="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec nisl elementum dolor consequat aliquam. Cras facilisis at enim mattis iaculis." />
-        <FaqItem title="Frequently asked question" details="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec nisl elementum dolor consequat aliquam. Cras facilisis at enim mattis iaculis." />
+        {faqItems.map((item) => (
+          <FaqItem title={item.question} details={item.answer} key={item.question} />
+        ))}
       </div>
     </div>
   );

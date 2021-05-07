@@ -175,6 +175,10 @@
     margin: 80px 0;
   }
 
+  .hero-header{
+    font-size: 2rem;
+  }
+
   .primary-image-container{
     width: auto;
     margin-bottom: 50px;

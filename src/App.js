@@ -12,15 +12,17 @@ LogRocket.init('troosh/troosh');
 
 function App() {
   return (
-    <Router>
-      <Layout>
-        <Switch>
-          <Route exact path="/">
-            <LandingPage />
-          </Route>
-        </Switch>
-      </Layout>
-    </Router>
+    <>
+      <Router>
+        <Layout>
+          <Switch>
+            <Route exact path="/">
+              <LandingPage />
+            </Route>
+          </Switch>
+        </Layout>
+      </Router>
+    </>
   );
 }
 

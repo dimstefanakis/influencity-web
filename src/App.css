@@ -19,6 +19,7 @@ img{
   image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+  max-width: 80vw;
 }
 
 @media (prefers-reduced-motion: no-preference) {

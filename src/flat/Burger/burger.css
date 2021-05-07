@@ -1,0 +1,24 @@
+.burger-content{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 150px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffd29b;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.burger-content-open{
+  transform: translateY(0);
+}
+
+.burger-link{
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: black;
+}

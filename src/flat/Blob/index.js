@@ -1,3 +1,3 @@
-import Blob from './Blob';
+import { Blob, Blob2, Blob3 } from './Blob';
 
-export default Blob;
+export { Blob, Blob2, Blob3 };

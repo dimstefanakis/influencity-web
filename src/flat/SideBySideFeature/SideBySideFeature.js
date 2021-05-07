@@ -1,6 +1,10 @@
+/* eslint-disable no-unused-vars */
+import { useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import Blob from '../Blob';
+import { Blob, Blob2, Blob3 } from '../Blob';
 import './sideBySideFeature.css';
+
+const blobs = [Blob, Blob2, Blob3];
 
 function SideBySideFeature({
   side = 'left', title, details, image, color = '#FFD29B',
@@ -28,11 +32,13 @@ function SideBySideFeature({
 
 function FeatureImage({ image, side, color }) {
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const randomBlob = useRef(blobs[Math.floor(Math.random() * blobs.length)]);
+  const RandomBlob = randomBlob.current;
 
   return (
     <div className="feature-image-container">
       <div style={{ position: 'absolute', height: '100%', zIndex: -1 }}>
-        <Blob
+        <RandomBlob
           style={{ height: '100%', transform: `scale(${isMobile ? '1' : '1.7'}) ${side === 'right' ? '' : 'rotate(100deg)'}` }}
           color={color}
         />
