@@ -1,0 +1,14 @@
+.faq-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 30px;
+}
+
+.faq{
+  display: flex;
+  flex-flow: column;
+  max-width: 400px;
+  width: 100%;
+  margin: 50px 0;
+}

@@ -1,0 +1,16 @@
+.between-header-wrapper{
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.between-header-wrapper q{
+  font-style: italic;
+  color: gray;
+}

@@ -35,9 +35,11 @@ const CustomForm = ({ status, message, onValidated }) => {
 
   return (
     <>
-      <h1 style={{
-        maxWidth: 300, textAlign: 'center', margin: 60, marginBottom: 0,
-      }}
+      <h1
+        id="newsletter"
+        style={{
+          maxWidth: 300, textAlign: 'center', margin: 60, marginBottom: 0,
+        }}
       >
         We are on our way
       </h1>

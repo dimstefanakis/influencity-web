@@ -7,10 +7,33 @@
   display: flex;
   flex-flow: row;
   align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
 
 .logo{
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.header-link{
   margin: 0 40px;
-  width: 60px;
-  height: 60px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.header-content{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+@media all and (max-width: 767px){
+  .header-content{
+    width: 80%;
+  }  
 }
