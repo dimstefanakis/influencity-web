@@ -9,7 +9,7 @@ const blobs = [Blob, Blob2, Blob3];
 function SideBySideFeature({
   side = 'left', title, details, image, color = '#FFD29B',
 }) {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
 
   return (
     <div className="full side-by-side">
@@ -31,7 +31,7 @@ function SideBySideFeature({
 }
 
 function FeatureImage({ image, side, color }) {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
   const randomBlob = useRef(blobs[Math.floor(Math.random() * blobs.length)]);
   const RandomBlob = randomBlob.current;
 
@@ -61,8 +61,8 @@ function FeatureDetails({ title, details }) {
     }}
     >
       <div style={{ maxWidth: 300 }}>
-        <h1>{title}</h1>
-        <p>{details}</p>
+        <h1 style={{ fontSize: '2.4em' }}>{title}</h1>
+        <p style={{ fontSize: '1.3em' }}>{details}</p>
 
       </div>
     </div>

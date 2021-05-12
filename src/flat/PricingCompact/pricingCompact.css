@@ -1,0 +1,27 @@
+.benefits-list{
+  width: 50%;
+  padding: 0;
+}
+
+.benefits-list li{
+  margin: 5px 0;
+}
+
+.pricing-compact{
+  width: 50%;
+  max-width: 500px;
+  background-color: rgb(170, 240, 209);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+  padding-bottom: 160px;
+  margin-bottom: 60px;
+}
+
+@media all and (max-width: 900px){
+  .pricing-compact{
+    width: 90%;
+  }
+}

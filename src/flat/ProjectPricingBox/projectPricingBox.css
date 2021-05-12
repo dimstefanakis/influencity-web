@@ -1,0 +1,17 @@
+.project-pricing-box{
+  position: absolute;
+  bottom: -60px;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  min-width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(255, 210, 155);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}

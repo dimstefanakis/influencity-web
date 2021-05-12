@@ -32,7 +32,7 @@
   align-items: center;
 }
 
-@media all and (max-width: 767px){
+@media all and (max-width: 920px){
   .header-content{
     width: 80%;
   }  

@@ -81,7 +81,7 @@ label{
   display: flex;
 }
 
-@media all and (max-width: 767px){
+@media all and (max-width: 920px){
   .subscribe-form{
     padding: 20px;
     width: 70%;

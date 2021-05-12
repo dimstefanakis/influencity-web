@@ -12,6 +12,7 @@ import PrimaryPhone from '../Svgs/PrimaryPhone';
 import OnlineLearningIllustration from '../Svgs/OnlineLearningIllustration';
 import Header from '../Header';
 import Pricing from '../Pricing';
+import PricingCompact from '../PricingCompact';
 import Faq from '../Faq';
 import SubscribeForm from '../SignUpForm';
 import Footer from '../Footer';
@@ -90,9 +91,9 @@ function LandingPage() {
             <div className="hero-text-container">
               <div className="hero-inner-container">
                 <h1 className="hero-header">
-                  The most interactive mentoring app
+                  Get actual skills with team effort
                 </h1>
-                <h2 style={{ maxWidth: 400, fontWeight: 300 }}>Get started on any skill affordably, as learning should be</h2>
+                <h2 style={{ maxWidth: 400, fontWeight: 300 }}>Learn new things with your mentor or team</h2>
                 <div>
                   <span>
                     <b>When is it released? </b>
@@ -108,7 +109,7 @@ function LandingPage() {
               </div>
             </div>
             <div className="primary-image-container">
-              <img src={`${process.env.PUBLIC_URL}/smartmockups_ko9a7vk7.png`} style={{ objectFit: 'contain', maxHeight: '80vh' }} alt="phone" />
+              <img src={`${process.env.PUBLIC_URL}/smartmockups_kohyhkmj.png`} style={{ objectFit: 'contain', maxHeight: '80vh' }} alt="phone" />
             </div>
           </div>
         </div>
@@ -119,13 +120,15 @@ function LandingPage() {
         </button>
       </div>
       <BetweenHeader title="Get the most innovative learning experience" quote="Online learning requires 40-60% less time to learn" />
-      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koam9nna.png`} side="right" title="Learn new skills" details="Get started on a selection of mediums and find the mentor that suits you" />
-      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koaml62o.png`} side="left" title="Join projects" details="Practice is the key to success. Projects let you hone your skills and get practical experience solo or on a team, with the guidance of your mentor" />
-      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koaq867p.png`} side="right" title="Get awarded" details="Perform well and get awarded for your progess" />
+      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_kohztffn.png`} side="left" title="Join projects" details="Practice is the key to success. Projects let you hone your skills and get practical experience solo or on a team, with the guidance of your mentor" />
+      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koj6bllk.png`} side="right" title="Get awarded" details="Perform well and get awarded for your progess" />
+      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koam9nna.png`} side="left" title="Start small, grow big" details="Explore different mentors on a variety of dynamic skills and get started with only $7" />
+
       <BetweenHeader title="What's in it for mentors?" quote="The online learning industry is projected to pass $370 billion by 2026" />
-      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_kobruoks.png`} side="left" title="Organize your thoughts in steps" color="#aaf0d1" details="Create and link multiple recourses together to create the best learning experience for your mentees" />
-      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koby6sz3.png`} side="right" title="Create projects" color="#aaf0d1" details="Help your community learn faster by creating interactive projects" />
-      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koby2vkr.png`} side="left" title="Get paid" color="#aaf0d1" details="Grow your community, grow your revenue. Gather revenue from subscriptions and project purchases" />
+      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koj6fqdm.png`} side="right" title="Organize your thoughts in steps" color="#aaf0d1" details="Create and link multiple recourses together to create the best learning experience for your mentees" />
+      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koj6iivz.png`} side="left" title="Create projects" color="#aaf0d1" details="Help your community learn faster by creating interactive projects" />
+      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koby2vkr.png`} side="right" title="Get paid" color="#aaf0d1" details="Grow your community, grow your revenue. Gather revenue from subscriptions and project purchases" />
+      <PricingCompact />
       <Faq />
       {/* <div className="landing-second-container">
         <div className="online-learning-illustration-container">

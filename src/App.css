@@ -47,7 +47,7 @@ body{
   overflow-x: hidden;
 }
 
-@media all and (max-width: 767px){
+@media all and (max-width: 920px){
   .landing-text-content{
     overflow-x: hidden;
   }
@@ -63,5 +63,11 @@ body{
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media all and (min-width: 2000px){
+  body{
+    font-size: 20px;
   }
 }
