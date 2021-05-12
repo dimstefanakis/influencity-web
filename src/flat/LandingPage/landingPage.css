@@ -136,7 +136,7 @@
   transform: translate(-50%, -50%);
   border-radius: 25px; 
 }
-@media all and (max-width: 767px){
+@media all and (max-width: 920px){
   .landing-container{
     flex-flow: column;
     height: auto;
@@ -221,7 +221,7 @@
   }
 }
 
-@media all and (max-width: 767px){
+@media all and (max-width: 920px){
   .secondary-screen-wrapper{
     position: relative;
     left: 0;

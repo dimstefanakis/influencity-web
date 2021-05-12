@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const faqItems = [
   {
     question: 'How do I access all the content on Troosh?',
@@ -11,10 +12,10 @@ const faqItems = [
     question: 'How do I become a mentor?',
     answer: 'You can become a mentor through the app. After creating an account choose “mentor” as your account type, then follow the steps given. Once you submit your application there will be a very brief review process until you get accepted.',
   },
-  {
-    question: 'Can anyone become a mentor?',
-    answer: 'The only requirement for becoming a mentor is to provide value to mentees. If you can provide value, you can become a mentor.',
-  },
+  // {
+  //   question: 'Can anyone become a mentor?',
+  //   answer: 'The only requirement for becoming a mentor is to provide value to mentees. If you can provide value, you can become a mentor.',
+  // },
   {
     question: 'How do mentors get paid?',
     answer: 'We use Stripe to get you paid quickly and keep your personal and payment information secure. Thousands of companies around the world trust Stripe to process payments for their users.',

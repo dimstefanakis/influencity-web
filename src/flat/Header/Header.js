@@ -4,7 +4,7 @@ import Burger from '../Burger';
 import './header.css';
 
 function Header() {
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
 
   return (
     <div className="header">
