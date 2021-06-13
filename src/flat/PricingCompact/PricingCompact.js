@@ -11,19 +11,7 @@ function PricingCompact() {
         width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center',
       }}
       >
-        <div style={{
-          width: '50%',
-          maxWidth: 500,
-          backgroundColor: '#aaf0d1',
-          display: 'flex',
-          flexFlow: 'column',
-          alignItems: 'center',
-          borderRadius: 10,
-          position: 'relative',
-          paddingBottom: 160,
-          marginBottom: 60,
-        }}
-        >
+        <div className="pricing-compact">
           <h2>$7/monthly</h2>
           <p style={{ maxWidth: '80%', textAlign: 'center' }}>
             Troosh let's you start small and grow big.
