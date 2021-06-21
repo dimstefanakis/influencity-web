@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import { Link } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
 import Burger from '../Burger';
 import './header.css';
@@ -9,10 +10,13 @@ function Header() {
   return (
     <div className="header">
       <div className="header-content">
-        <div style={{ flex: 1, alignItems: 'center', display: 'flex' }}>
-          <img src={`${process.env.PUBLIC_URL}/logo_black.png`} className="logo" alt="1s" />
-          <span style={{ fontSize: '1.9rem', fontWeight: 700 }}>Troosh</span>
-        </div>
+        <Link to="/" style={{ color: 'black' }}>
+          <div style={{ flex: 1, alignItems: 'center', display: 'flex' }}>
+            <img src={`${process.env.PUBLIC_URL}/logo_black.png`} className="logo" alt="1s" />
+            <span style={{ fontSize: '1.9rem', fontWeight: 700 }}>Troosh</span>
+          </div>
+
+        </Link>
         {/* {isMobile ? <Burger /> : (
           <div style={{ display: 'flex', alignItems: 'center' }}>
             <p className="header-link">About</p>

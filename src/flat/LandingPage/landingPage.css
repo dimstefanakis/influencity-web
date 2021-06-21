@@ -70,7 +70,7 @@
 
 .hero-header{
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 900 !important;
   max-width: 440px;
   margin: 50px 0px 0px;
 }
@@ -96,7 +96,7 @@
   font-weight: bold;
   background-color: #ffd29b;
   color: black;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', sans-serif !important;
   font-size: 1rem;
   cursor: pointer;
   max-width: 150px;
@@ -176,7 +176,12 @@
   }
 
   .hero-header{
-    font-size: 2rem;
+    font-size: 2rem !important;
+  }
+
+  .hero-subheader{
+    max-width: 400px;
+    font-weight: 300 !important;
   }
 
   .primary-image-container{

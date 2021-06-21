@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', sans-serif !important;
 }
 
 code {
@@ -15,9 +15,22 @@ code {
     monospace;
 }
 
-
 html{
   height: 100%;
+}
+
+h1{
+  font-weight: 700 !important;
+}
+
+h2{
+  display: block !important;
+  font-size: 1.5em !important;
+  margin-block-start: 0.83em !important;
+  margin-block-end: 0.83em !important;
+  margin-inline-start: 0px !important;
+  margin-inline-end: 0px !important;
+  font-weight: bold !important;
 }
 
 #root{

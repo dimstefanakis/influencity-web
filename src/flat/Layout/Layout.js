@@ -1,10 +1,12 @@
-import LandingPage from '../LandingPage/index';
+// import LandingPage from '../LandingPage/index';
+import Header from '../Header';
 import './layout.css';
 
-function Layout() {
+function Layout({ children }) {
   return (
     <div className="layout">
-      <LandingPage />
+      <Header />
+      {children}
     </div>
   );
 }

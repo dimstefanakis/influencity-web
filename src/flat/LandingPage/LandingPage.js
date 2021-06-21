@@ -10,7 +10,6 @@ import SideBySideFeature from '../SideBySideFeature';
 import BetweenHeader from '../BetweenHeader';
 import PrimaryPhone from '../Svgs/PrimaryPhone';
 import OnlineLearningIllustration from '../Svgs/OnlineLearningIllustration';
-import Header from '../Header';
 import Pricing from '../Pricing';
 import PricingCompact from '../PricingCompact';
 import Faq from '../Faq';
@@ -84,7 +83,6 @@ function LandingPage() {
         <link rel="canonical" href="https://troosh.app" />
         <meta name="description" content="The best place to start any skill. Start learning today with the innovative application, affordably." />
       </Helmet>
-      <Header />
       <div className="landing-container">
         <div className="landing-full">
           <div className="hero-container">
@@ -93,7 +91,7 @@ function LandingPage() {
                 <h1 className="hero-header">
                   Get actual skills with team effort
                 </h1>
-                <h2 style={{ maxWidth: 400, fontWeight: 300 }}>Learn new things with your mentor or team</h2>
+                <h2 className="hero-subheader">Learn new things with your mentor or team</h2>
                 <div>
                   <span>
                     <b>When is it released? </b>

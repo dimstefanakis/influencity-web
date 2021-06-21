@@ -5,7 +5,7 @@ function ProjectPricingBox() {
     <div
       className="project-pricing-box"
     >
-      <h3>
+      <h3 className="project-pricing-header">
         Projects
       </h3>
       <p style={{ fontSize: '0.8rem', textAlign: 'center' }}>

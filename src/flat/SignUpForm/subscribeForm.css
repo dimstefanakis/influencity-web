@@ -79,6 +79,7 @@ label{
   background-color: #84dcb5;
   margin: 0 10px;
   display: flex;
+  place-items: center;
 }
 
 @media all and (max-width: 920px){

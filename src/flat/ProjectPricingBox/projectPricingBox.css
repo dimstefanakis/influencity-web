@@ -15,3 +15,8 @@
   align-items: center;
   flex-flow: column;
 }
+
+.project-pricing-header{
+  font-weight: bold;
+  margin: 20px 0;
+}

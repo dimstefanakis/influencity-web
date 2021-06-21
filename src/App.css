@@ -39,6 +39,13 @@ img{
   color: white;
 }
 
+.ant-btn-primary{
+  background-color: #ffd29b !important;
+  background: #ffd29b !important;
+  border-color: #ffd29b !important;
+  color: black !important;
+}
+
 .App-link {
   color: #61dafb;
 }
