@@ -1,0 +1,9 @@
+.confirm-email-container{
+    padding-top: 100px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    font-size: 1.3rem;
+    min-height: 100vh;
+    background-color: #aaf0d1;
+}

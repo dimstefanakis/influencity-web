@@ -6,6 +6,7 @@ import {
 import LogRocket from 'logrocket';
 import LandingPage from './flat/LandingPage';
 import PasswordReset from './features/PasswordReset';
+import ConfirmEmail from './features/ConfirmEmail';
 import Layout from './flat/Layout';
 import './App.css';
 import 'antd/dist/antd.css';
@@ -23,6 +24,9 @@ function App() {
             </Route>
             <Route path="/password/reset/:uid/:token">
               <PasswordReset />
+            </Route>
+            <Route path="/confirm-email/:key">
+              <ConfirmEmail />
             </Route>
           </Switch>
         </Layout>
