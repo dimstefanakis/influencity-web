@@ -25,7 +25,10 @@ function App() {
             <Route path="/password/reset/:uid/:token">
               <PasswordReset />
             </Route>
-            <Route path="/confirm-email/:key">
+            {/* <Route path="/confirm-email/:key">
+              <ConfirmEmail />
+            </Route> */}
+            <Route path="/rest-auth/registration/account-confirm-email/:key">
               <ConfirmEmail />
             </Route>
           </Switch>
