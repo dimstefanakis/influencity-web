@@ -2,7 +2,7 @@
 const faqItems = [
   {
     question: 'How do I access all the content on Troosh?',
-    answer: 'A monthly subscription at $7/month is required to get access to a mentors content. After subscribing to the mentor you can join a project for free, then individual project purchases are required. Before committing to a mentor a small number of free content is available.',
+    answer: 'A monthly subscription at $9/month is required to get access to a mentors content. After subscribing to the mentor you can join a project for free, then individual project purchases are required. Before committing to a mentor a small number of free content is available.',
   },
   {
     question: 'What if my mentor is bad?',
