@@ -69,7 +69,6 @@ const ResetPasswordForm = () => {
 
   const onFinish = async (values) => {
     await resetPassword(values);
-    console.log('Received values of form: ', values);
   };
 
   return (

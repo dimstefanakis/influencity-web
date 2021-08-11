@@ -15,6 +15,7 @@ import PricingCompact from '../PricingCompact';
 import Faq from '../Faq';
 import SubscribeForm from '../SignUpForm';
 import Footer from '../Footer';
+import StoreButtons from '../StoreButtons/StoreButtons';
 import './landingPage.css';
 
 const pages = [
@@ -92,18 +93,7 @@ function LandingPage() {
                   Get actual skills with team effort
                 </h1>
                 <h2 className="hero-subheader">Learn new things with your mentor or team</h2>
-                <div>
-                  <span>
-                    <b>When is it released? </b>
-                    <span style={{ fontStyle: 'italic' }}>
-                      Join our
-                      {' '}
-                      <a href="#newsletter">newsletter</a>
-                      {' '}
-                      and be the first to know!
-                    </span>
-                  </span>
-                </div>
+                <StoreButtons />
               </div>
             </div>
             <div className="primary-image-container">

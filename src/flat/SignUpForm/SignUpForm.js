@@ -41,13 +41,13 @@ const CustomForm = ({ status, message, onValidated }) => {
           maxWidth: 300, textAlign: 'center', margin: 60, marginBottom: 0,
         }}
       >
-        We are on our way
+        Seems fun right?
       </h1>
       <p style={{
         maxWidth: 300, textAlign: 'center', margin: 60, marginTop: 10,
       }}
       >
-        Fill this interest form and be the first to know about our launch!
+        Fill this interest form and we will get in contact with you ASAP!
       </p>
       <div
         className="subscribe-form"
@@ -86,7 +86,7 @@ const CustomForm = ({ status, message, onValidated }) => {
                 </div>
               </div>
               <button onClick={submit} type="submit">
-                Subscribe
+                Submit
               </button>
             </>
           )}
