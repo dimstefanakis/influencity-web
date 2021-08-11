@@ -26,7 +26,7 @@ const faqItems = [
   },
   {
     question: 'When is Troosh coming?',
-    answer: 'Troosh Is coming early summer! Don’t forget to fill the form below and get immediately notified on our launch!',
+    answer: 'Troosh is here, available on both ios and android!',
   },
 ];
 
