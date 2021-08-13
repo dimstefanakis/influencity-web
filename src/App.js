@@ -7,6 +7,7 @@ import LogRocket from 'logrocket';
 import LandingPage from './flat/LandingPage';
 import PasswordReset from './features/PasswordReset';
 import ConfirmEmail from './features/ConfirmEmail';
+import StripeOnboardCallback from './features/StripeOnboardCallback';
 import Layout from './flat/Layout';
 import './App.css';
 import 'antd/dist/antd.css';
@@ -21,6 +22,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <LandingPage />
+            </Route>
+            <Route exact path="/users/oauth/callback">
+              <StripeOnboardCallback />
             </Route>
             <Route path="/password/reset/:uid/:token">
               <PasswordReset />
