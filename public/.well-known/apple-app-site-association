@@ -1,0 +1,10 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [{
+            "appID": "94R3NUTP8S.com.example.influencity",
+            "paths": ["/mentor/*"]
+            }
+        ]
+    }
+}
