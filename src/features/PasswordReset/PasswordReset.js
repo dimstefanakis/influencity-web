@@ -5,11 +5,11 @@ import {
   Form, Input, Button,
 } from 'antd';
 import { LockOutlined } from '@ant-design/icons';
-import './password_reset.css';
+import styles from './PasswordReset.module.css';
 
 function PasswordReset() {
   return (
-    <div className="password-reset-container">
+    <div className={styles.passwordResetContainer}>
       <h1>Reset password</h1>
       <ResetPasswordForm />
     </div>
@@ -41,7 +41,7 @@ const ResetPasswordForm = () => {
 
   async function resetPassword(values) {
     setLoading(true);
-    const url = `${process.env.REACT_APP_DOMAIN_URL}/rest-auth/password/reset/confirm/`;
+    const url = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/rest-auth/password/reset/confirm/`;
     try {
       const response = await fetch(
         url,

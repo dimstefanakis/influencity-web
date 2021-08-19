@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useTransition, animated } from 'react-spring/web.cjs';
 import ForMentors from './ForMentors';
 import ForMentees from './ForMentees';
-import './whatWeOffer.css';
+import styles from './WhatWeOffer.module.css';
 
 function WhatWeOffer() {
   const [index, setIndex] = useState(0);
@@ -34,17 +34,17 @@ function WhatWeOffer() {
     }}
     >
       <h1 style={{ maxWidth: 300, textAlign: 'center', margin: 60 }}>The best place to start any skill</h1>
-      <div className="what-we-offer-content-container">
-        <div className="offer-selector">
+      <div className={styles.whatWeOfferContentContainer}>
+        <div className={styles.offerSelector}>
           <div
-            className="offer-selector-button"
+            className={styles.offerSelectorButton}
             style={{ backgroundColor: index === 0 ? '#efb46c' : '#ffd29b', borderTopLeftRadius: 10, borderBottomLeftRadius: 10 }}
             onClick={() => setIndex(0)}
             role="tab"
           >
             <span>For mentees</span>
             <div
-              className="offer-selector-border-left"
+              className={styles.offerSelectorBorderLeft}
               style={{
                 position: 'absolute',
                 right: 0,
@@ -57,14 +57,14 @@ function WhatWeOffer() {
             />
           </div>
           <div
-            className="offer-selector-button"
+            className={styles.offerSelectorButton}
             style={{ backgroundColor: index === 1 ? '#efb46c' : '#ffd29b', borderTopRightRadius: 10, borderBottomRightRadius: 10 }}
             onClick={() => setIndex(1)}
             role="tab"
           >
             <span>For mentors</span>
             <div
-              className="offer-selector-border-right"
+              className={styles.offerSelectorBorderRight}
               style={{
                 position: 'absolute',
                 left: 0,

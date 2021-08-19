@@ -1,3 +1,5 @@
+import styles from './PricingBox.module.css';
+
 function FreePricingBox() {
   return (
     <>
@@ -5,7 +7,7 @@ function FreePricingBox() {
       <div>
         <h1>FREE</h1>
       </div>
-      <p className="pricing-description">
+      <p className={styles.pricingDescription}>
         Free forever.
         Check out what each mentor has to offer and decide
         if they are the perfect fit for your needs!

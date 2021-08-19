@@ -1,11 +1,11 @@
-import './projectPricingBox.css';
+import styles from './ProjectPricingBox.module.css';
 
 function ProjectPricingBox() {
   return (
     <div
-      className="project-pricing-box"
+      className={styles.projectPricingBox}
     >
-      <h3 className="project-pricing-header">
+      <h3 className={styles.projectPricingHeader}>
         Projects
       </h3>
       <p style={{ fontSize: '0.8rem', textAlign: 'center' }}>

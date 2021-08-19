@@ -25,7 +25,7 @@
   cursor: pointer;
 }
 
-.header-content{
+.headerContent{
   width: 60%;
   height: 100%;
   display: flex;
@@ -33,7 +33,7 @@
 }
 
 @media all and (max-width: 920px){
-  .header-content{
+  .headerContent{
     width: 80%;
   }  
 }

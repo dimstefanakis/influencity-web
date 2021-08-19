@@ -1,11 +1,11 @@
 import PricingBox from '../PricingBox';
-import './pricing.css';
+import styles from './Pricing.module.css';
 
 function Pricing() {
   return (
-    <div className="pricing-container">
+    <div className={styles.pricingContainer}>
       <h1 style={{ margin: 60, color: 'white' }}>Pricing plans</h1>
-      <div className="pricing-list">
+      <div className={styles.pricingList}>
         <PricingBox type="free" />
         <PricingBox type="basic" />
         <PricingBox type="premium" />

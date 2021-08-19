@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState } from 'react';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
-import './faqItem.css';
+import styles from './FaqItem.module.css';
 
 function FaqItem({ title, details }) {
   const [shown, setShown] = useState(false);
@@ -23,7 +23,7 @@ function FaqItem({ title, details }) {
           {shown ? <AiOutlineMinus /> : <AiOutlinePlus />}
         </div>
       </div>
-      <p className={shown ? 'faq-item-open' : 'faq-item'}>
+      <p className={shown ? styles.faqItemOpen : styles.faqItem}>
         {details}
       </p>
     </div>

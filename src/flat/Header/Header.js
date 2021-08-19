@@ -1,28 +1,24 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { useMediaQuery } from 'react-responsive';
 import Burger from '../Burger';
-import './header.css';
+import styles from './Header.module.css';
 
 function Header() {
   const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
 
   return (
-    <div className="header">
-      <div className="header-content">
-        <Link to="/" style={{ color: 'black' }}>
-          <div style={{ flex: 1, alignItems: 'center', display: 'flex' }}>
-            <img src={`${process.env.PUBLIC_URL}/logo_black.png`} className="logo" alt="1s" />
-            <span style={{ fontSize: '1.9rem', fontWeight: 700 }}>Troosh</span>
-          </div>
-
+    <div className={styles.header}>
+      <div className={styles.headerContent}>
+        <Link href="/">
+          <a style={{ color: 'black' }}>
+            <div style={{ flex: 1, alignItems: 'center', display: 'flex' }}>
+              <img src="/logo_black.png" className={styles.logo} alt="1s" />
+              <span style={{ fontSize: '1.9rem', fontWeight: 700 }}>Troosh</span>
+            </div>
+          </a>
         </Link>
-        {/* {isMobile ? <Burger /> : (
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <p className="header-link">About</p>
-          </div>
-        )} */}
-
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 import { useRef } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Blob, Blob2, Blob3 } from '../Blob';
-import './sideBySideFeature.css';
+import styles from './SideBySideFeature.module.css';
 
 const blobs = [Blob, Blob2, Blob3];
 
@@ -12,7 +12,7 @@ function SideBySideFeature({
   const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
 
   return (
-    <div className="full side-by-side">
+    <div className={`full ${styles.sideBySide}`}>
       {side === 'right' || isMobile
         ? (
           <>
@@ -36,14 +36,14 @@ function FeatureImage({ image, side, color }) {
   const RandomBlob = randomBlob.current;
 
   return (
-    <div className="feature-image-container">
+    <div className={styles.featureImageContainer}>
       <div style={{ position: 'absolute', height: '100%', zIndex: -1 }}>
         <RandomBlob
           style={{ height: '100%', transform: `scale(${isMobile ? '1' : '1.7'}) ${side === 'right' ? '' : 'rotate(100deg)'}` }}
           color={color}
         />
       </div>
-      <img src={image} className="side-by-side-image" alt="feature" />
+      <img src={image} className={styles.sideBySideImage} alt="feature" />
     </div>
   );
 }

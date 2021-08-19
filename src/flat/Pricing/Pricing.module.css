@@ -1,4 +1,4 @@
-.pricing-container{
+.pricingContainer{
   min-height: 70vh;
   width: 100%;
   background-color: #212121;
@@ -11,7 +11,7 @@
   padding-bottom: 100px;
 }
 
-.pricing-list{
+.pricingList{
   padding: 40px;
   display: flex;
   flex-flow: row wrap;
@@ -22,7 +22,7 @@
 }
 
 @media all and (max-width: 480px){
-  .pricing-list{
+  .pricingList{
     padding: 5px;
   }
 }

@@ -1,4 +1,4 @@
-.between-header-wrapper{
+.betweenHeaderWrapper{
   width: 100%;
   display: flex;
   flex-flow: column;
@@ -10,7 +10,7 @@
   text-align: center;
 }
 
-.between-header-wrapper q{
+.betweenHeaderWrapper q{
   font-style: italic;
   color: gray;
 }

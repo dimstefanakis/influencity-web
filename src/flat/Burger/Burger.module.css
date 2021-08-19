@@ -1,4 +1,4 @@
-.burger-content{
+.burgerContent{
   position: fixed;
   top: 0;
   left: 0;
@@ -13,11 +13,11 @@
   width: 100%;
 }
 
-.burger-content-open{
+.burgerContentOpen{
   transform: translateY(0);
 }
 
-.burger-link{
+.burgerLink{
   font-weight: bold;
   font-size: 1.3rem;
   color: black;

@@ -1,6 +1,7 @@
 import {
   useTransition, animated,
 } from 'react-spring/web.cjs';
+import styles from '../WhatWeOffer/WhatWeOffer.module.css';
 
 function ChainedBoxes({ data, transRef, phase }) {
   // check phase
@@ -16,10 +17,10 @@ function ChainedBoxes({ data, transRef, phase }) {
   // useChain(open ? [springRef, transRef] : [transRef, springRef], [0, open ? 0.1 : 0.6]);
 
   return (
-    <div className="points-container">
+    <div className={styles.pointsContainer}>
       {transitions((style, item) => (
         (
-          <animated.div style={style} className="point-box">
+          <animated.div style={style} className={styles.pointBox}>
             {item.description}
           </animated.div>
         )
