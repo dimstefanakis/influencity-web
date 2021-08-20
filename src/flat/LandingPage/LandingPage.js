@@ -5,6 +5,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { useTransition, animated } from 'react-spring';
 import { Helmet } from 'react-helmet';
+import Head from 'next/head';
 import WhatWeOffer from '../WhatWeOffer/index';
 import SideBySideFeature from '../SideBySideFeature';
 import BetweenHeader from '../BetweenHeader';
@@ -16,7 +17,7 @@ import Faq from '../Faq';
 import SubscribeForm from '../SignUpForm';
 import Footer from '../Footer';
 import StoreButtons from '../StoreButtons/StoreButtons';
-import './landingPage.css';
+import styles from './LandingPage.module.css';
 
 const pages = [
   ({ style }) => (
@@ -24,7 +25,7 @@ const pages = [
       ...style, position: 'absolute', height: '100%', width: '100%',
     }}
     >
-      <img src={`${process.env.PUBLIC_URL}/6thimage.png`} className="image-in-phone" alt="1s" />
+      <img src="/6thimage.png" className={styles.imageInPhone} alt="1s" />
     </animated.div>
   ),
   ({ style }) => (
@@ -32,7 +33,7 @@ const pages = [
       ...style, position: 'absolute', height: '100%', width: '100%',
     }}
     >
-      <img src={`${process.env.PUBLIC_URL}/5thimage.png`} className="image-in-phone" alt="1s" />
+      <img src="/5thimage.png" className={styles.imageInPhone} alt="1s" />
     </animated.div>
   ),
   ({ style }) => (
@@ -40,7 +41,7 @@ const pages = [
       ...style, position: 'absolute', height: '100%', width: '100%',
     }}
     >
-      <img src={`${process.env.PUBLIC_URL}/3rdimage.png`} className="image-in-phone" alt="1s" />
+      <img src="/3rdimage.png" className={styles.imageInPhone} alt="1s" />
     </animated.div>
   ),
   ({ style }) => (
@@ -48,7 +49,7 @@ const pages = [
       ...style, position: 'absolute', height: '100%', width: '100%',
     }}
     >
-      <img src={`${process.env.PUBLIC_URL}/4thimage.png`} className="image-in-phone" alt="1s" />
+      <img src="/4thimage.png" className={styles.imageInPhone} alt="1s" />
     </animated.div>
   ),
 ];
@@ -70,34 +71,34 @@ function LandingPage() {
     leave: { opacity: 0, transform: 'translate3d(-50%,0,0)' },
   });
 
-  function handleLearnMoreClick() {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: 'smooth',
-    });
-  }
+  // function handleLearnMoreClick() {
+  //   window.scrollTo({
+  //     top: window.innerHeight,
+  //     behavior: 'smooth',
+  //   });
+  // }
   return (
     <div style={{ width: '100%', height: '100%' }}>
-      <Helmet>
+      <Head>
         <meta charSet="utf-8" />
         <title>Troosh</title>
         <link rel="canonical" href="https://troosh.app" />
         <meta name="description" content="The best place to start any skill. Start learning today with the innovative application, affordably." />
-      </Helmet>
-      <div className="landing-container">
-        <div className="landing-full">
-          <div className="hero-container">
-            <div className="hero-text-container">
-              <div className="hero-inner-container">
-                <h1 className="hero-header">
+      </Head>
+      <div className={styles.landingContainer}>
+        <div className={styles.landingFull}>
+          <div className={styles.heroContainer}>
+            <div className={styles.heroTextContainer}>
+              <div className={styles.heroInnerContainer}>
+                <h1 className={styles.heroHeader}>
                   Get actual skills with team effort
                 </h1>
-                <h2 className="hero-subheader">Learn new things with your mentor or team</h2>
+                <h2 className={styles.heroSubheader}>Learn new things with your mentor or team</h2>
                 <StoreButtons />
               </div>
             </div>
-            <div className="primary-image-container">
-              <img src={`${process.env.PUBLIC_URL}/smartmockups_kohyhkmj.png`} style={{ objectFit: 'contain', maxHeight: '80vh' }} alt="phone" />
+            <div className={styles.primaryImageContainer}>
+              <img src="/smartmockups_kohyhkmj.png" style={{ objectFit: 'contain', maxHeight: '80vh' }} alt="phone" />
             </div>
           </div>
         </div>
@@ -108,14 +109,14 @@ function LandingPage() {
         </button> */}
       </div>
       <BetweenHeader title="Get the most innovative learning experience" quote="Online learning requires 40-60% less time to learn" />
-      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_kohztffn.png`} side="left" title="Join projects" details="Practice is the key to success. Projects let you hone your skills and get practical experience solo or on a team, with the guidance of your mentor" />
-      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koj6bllk.png`} side="right" title="Get awarded" details="Perform well and get awarded for your progess" />
-      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koam9nna.png`} side="left" title="Start small, grow big" details="Explore different mentors on a variety of dynamic skills and get started with only $9" />
+      <SideBySideFeature image="/smartmockups_kohztffn.png" side="left" title="Join projects" details="Practice is the key to success. Projects let you hone your skills and get practical experience solo or on a team, with the guidance of your mentor" />
+      <SideBySideFeature image="/smartmockups_koj6bllk.png" side="right" title="Get awarded" details="Perform well and get awarded for your progess" />
+      <SideBySideFeature image="/smartmockups_koam9nna.png" side="left" title="Start small, grow big" details="Explore different mentors on a variety of dynamic skills and get started with only 9€" />
 
       <BetweenHeader title="What's in it for mentors?" quote="The online learning industry is projected to pass $370 billion by 2026" />
-      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koj6fqdm.png`} side="right" title="Organize your thoughts in steps" color="#aaf0d1" details="Create and link multiple recourses together to create the best learning experience for your mentees" />
-      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koj6iivz.png`} side="left" title="Create projects" color="#aaf0d1" details="Help your community learn faster by creating interactive projects" />
-      <SideBySideFeature image={`${process.env.PUBLIC_URL}/smartmockups_koby2vkr.png`} side="right" title="Get paid" color="#aaf0d1" details="Grow your community, grow your revenue. Gather revenue from subscriptions and project purchases" />
+      <SideBySideFeature image="/smartmockups_koj6fqdm.png" side="right" title="Organize your thoughts in steps" color="#aaf0d1" details="Create and link multiple recourses together to create the best learning experience for your mentees" />
+      <SideBySideFeature image="/smartmockups_koj6iivz.png" side="left" title="Create projects" color="#aaf0d1" details="Help your community learn faster by creating interactive projects" />
+      <SideBySideFeature image="/smartmockups_koby2vkr.png" side="right" title="Get paid" color="#aaf0d1" details="Grow your community, grow your revenue. Gather revenue from subscriptions and project purchases" />
       <PricingCompact />
       <Faq />
       {/* <div className="landing-second-container">

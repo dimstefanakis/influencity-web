@@ -1,11 +1,11 @@
 import FreePricingBox from './FreePricingBox';
 import BasicPricingBox from './BasicPricingBox';
 import PremiumPricingBox from './PremiumPricingBox';
-import './pricingBox.css';
+import styles from './PricingBox.module.css';
 
 function PricingBox({ type }) {
   return (
-    <div className="pricing-box">
+    <div className={styles.pricingBox}>
       {type === 'free' ? <FreePricingBox /> : null}
       {type === 'basic' ? <BasicPricingBox /> : null}
       {type === 'premium' ? <PremiumPricingBox /> : null}

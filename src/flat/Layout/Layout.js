@@ -1,10 +1,10 @@
 // import LandingPage from '../LandingPage/index';
 import Header from '../Header';
-import './layout.css';
+import styles from './Layout.module.css';
 
 function Layout({ children }) {
   return (
-    <div className="layout">
+    <div className={styles.layout}>
       <Header />
       {children}
     </div>

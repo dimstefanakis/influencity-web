@@ -1,4 +1,4 @@
-.feature-image-container{
+.featureImageContainer{
   height: 100%;
   display: flex;
   justify-content: center;
@@ -7,14 +7,14 @@
   width: 40%;
 }
 
-.side-by-side-image{
+.sideBySideImage{
   height: 70%;
   z-index: 1;
   max-height: 70vh;
 }
 
 @media all and (max-width: 920px){
-  .side-by-side{
+  .sideBySide{
     flex-flow: column !important;
     align-items: center;
     text-align: center;

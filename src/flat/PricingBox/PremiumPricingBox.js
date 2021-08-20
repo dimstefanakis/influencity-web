@@ -1,3 +1,5 @@
+import styles from './PricingBox.module.css';
+
 function PremiumPricingBox() {
   return (
     <>
@@ -14,11 +16,11 @@ function PremiumPricingBox() {
         </div>
         <span style={{ color: 'gray', marginBottom: 20, display: 'block' }}>Set by the mentor</span>
       </div>
-      <p className="pricing-description">
+      <p className={styles.pricingDescription}>
         Skyrocket your skills. This is the best choice for those
         who want their skills to go even further beyond.
       </p>
-      <ul className="pro-list">
+      <ul className={styles.proList}>
         <li style={{ fontWeight: 'bold' }}>
           All the previous and...
         </li>

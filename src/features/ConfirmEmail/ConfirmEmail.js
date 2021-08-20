@@ -1,16 +1,19 @@
 /* eslint-disable no-unused-vars */
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import './confirm_email.css';
+// import { useParams } from 'react-router-dom';
+import { useRouter } from 'next/router';
+import styles from './ConfirmEmail.module.css';
 
 function ConfirmEmail() {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState(null);
-  const { key } = useParams();
+  const router = useRouter();
+  const { key } = router.query;
 
   async function confirmEmail() {
     setLoading(true);
-    const url = `${process.env.REACT_APP_DOMAIN_URL}/rest-auth/registration/verify-email/`;
+    const url = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/rest-auth/registration/verify-email/`;
+    const body = JSON.stringify({ key });
     try {
       const response = await fetch(
         url,
@@ -19,7 +22,7 @@ function ConfirmEmail() {
             'Content-Type': 'application/json',
           },
           method: 'POST',
-          body: JSON.stringify({ key }),
+          body,
         },
       );
       const content = await response.json();
@@ -30,11 +33,13 @@ function ConfirmEmail() {
   }
 
   useEffect(() => {
-    confirmEmail();
-  }, []);
+    if (key) {
+      confirmEmail();
+    }
+  }, [key]);
 
   return (
-    <div className="confirm-email-container">
+    <div className={styles.confirmEmailContainer}>
       <h1>Confirm email</h1>
       <p>{status === 200 || status === 201 ? 'Successfully confirmed email!' : ''}</p>
     </div>

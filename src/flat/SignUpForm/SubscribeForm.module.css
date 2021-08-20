@@ -1,4 +1,4 @@
-.subscribe-form{
+.subscribeForm{
   background: #aaf0d1;
   border-radius: 10px;
   padding: 50px;
@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.subscribe-form input{
+.subscribeForm input{
   font-size: 1rem !important;
   font-family: inherit;
   background-color: #84dcb5;
@@ -20,7 +20,7 @@
   outline: none;
 }
 
-.subscribe-form button{
+.subscribeForm button{
   background-color: #ffd29b;
   border: 0;
   font-family: inherit;
@@ -31,7 +31,7 @@
   cursor: pointer;
 }
 
-.account-type{
+.accountType{
   margin: 30px 0px;
   flex-flow: row;
   width: 80%;
@@ -40,7 +40,7 @@
   margin-top: 0;
 }
 
-input[type='radio']:after {
+/* input[type='radio']:after {
   width: 15px;
   height: 15px;
   border-radius: 15px;
@@ -70,9 +70,9 @@ input[type='radio']:checked:after {
 
 label{
   margin-left: 10px;
-}
+} */
 
-.subscribe-radio{
+.subscribeRadio{
   padding: 10px;
   padding-right: 15px;
   border-radius: 100px;
@@ -83,12 +83,12 @@ label{
 }
 
 @media all and (max-width: 920px){
-  .subscribe-form{
+  .subscribeForm{
     padding: 20px;
     width: 70%;
   }
 
-  .subscribe-form button{
+  .subscribeForm button{
     width: 80%;
   }
 }

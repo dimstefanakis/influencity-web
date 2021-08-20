@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useState } from 'react';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
-import './subscribeForm.css';
+import styles from './SubscribeForm.module.css';
 
 const url = 'https://troosh.us1.list-manage.com/subscribe/post?u=3ea0d06a53629b8c41e72ed2d&amp;id=cc15af59c5';
 
@@ -50,7 +50,7 @@ const CustomForm = ({ status, message, onValidated }) => {
         Fill this interest form and we will get in contact with you ASAP!
       </p>
       <div
-        className="subscribe-form"
+        className={styles.subscribeForm}
       >
         {/* {status === 'sending' && <div style={{ color: 'blue' }}>sending...</div>} */}
         {status === 'error' && (
@@ -75,12 +75,12 @@ const CustomForm = ({ status, message, onValidated }) => {
                 placeholder="Your email"
               />
               <p style={{ marginTop: 20, textAlign: 'center' }}>What would you like to be on Troosh?</p>
-              <div onChange={(e) => setType(e.target.value)} className="account-type">
-                <div className="subscribe-radio">
+              <div onChange={(e) => setType(e.target.value)} className={styles.accountType}>
+                <div className={styles.subscribeRadio}>
                   <input type="radio" value="Mentee" name="type" id="mentee-input" />
                   <label htmlFor="mentee-input">Mentee</label>
                 </div>
-                <div className="subscribe-radio">
+                <div className={styles.subscribeRadio}>
                   <input type="radio" value="Mentor" name="type" id="mentor-input" />
                   <label htmlFor="mentor-input">Mentor</label>
                 </div>

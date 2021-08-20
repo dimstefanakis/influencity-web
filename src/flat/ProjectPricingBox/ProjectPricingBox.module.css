@@ -1,4 +1,4 @@
-.project-pricing-box{
+.projectPricingBox{
   position: absolute;
   bottom: -60px;
   right: 0;
@@ -16,7 +16,7 @@
   flex-flow: column;
 }
 
-.project-pricing-header{
+.projectPricingHeader{
   font-weight: bold;
   margin: 20px 0;
 }

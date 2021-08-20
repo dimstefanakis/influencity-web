@@ -1,13 +1,13 @@
-.benefits-list{
+.benefitsList{
   width: 50%;
   padding: 0;
 }
 
-.benefits-list li{
+.benefitsList li{
   margin: 5px 0;
 }
 
-.pricing-compact{
+.pricingCompact{
   width: 50%;
   max-width: 500px;
   background-color: rgb(170, 240, 209);
@@ -21,7 +21,7 @@
 }
 
 @media all and (max-width: 900px){
-  .pricing-compact{
+  .pricingCompact{
     width: 90%;
   }
 }
