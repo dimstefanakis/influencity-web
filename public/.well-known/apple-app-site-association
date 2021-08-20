@@ -2,7 +2,7 @@
     "applinks": {
         "apps": [],
         "details": [{
-            "appID": "94R3NUTP8S.com.example.influencity",
+            "appID": "94R3NUTP8S.org.reactjs.native.example.influencity",
             "paths": ["/mentor/*"]
             }
         ]
