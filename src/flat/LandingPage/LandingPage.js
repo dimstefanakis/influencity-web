@@ -111,7 +111,7 @@ function LandingPage() {
       <BetweenHeader title="Get the most innovative learning experience" quote="Online learning requires 40-60% less time to learn" />
       <SideBySideFeature image="/smartmockups_kohztffn.png" side="left" title="Join projects" details="Practice is the key to success. Projects let you hone your skills and get practical experience solo or on a team, with the guidance of your mentor" />
       <SideBySideFeature image="/smartmockups_koj6bllk.png" side="right" title="Get awarded" details="Perform well and get awarded for your progess" />
-      <SideBySideFeature image="/smartmockups_koam9nna.png" side="left" title="Start small, grow big" details="Explore different mentors on a variety of dynamic skills and get started with only $9" />
+      <SideBySideFeature image="/smartmockups_koam9nna.png" side="left" title="Start small, grow big" details="Explore different mentors on a variety of dynamic skills and get started with only 9€" />
 
       <BetweenHeader title="What's in it for mentors?" quote="The online learning industry is projected to pass $370 billion by 2026" />
       <SideBySideFeature image="/smartmockups_koj6fqdm.png" side="right" title="Organize your thoughts in steps" color="#aaf0d1" details="Create and link multiple recourses together to create the best learning experience for your mentees" />

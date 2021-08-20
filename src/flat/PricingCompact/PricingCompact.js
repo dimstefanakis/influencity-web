@@ -12,7 +12,7 @@ function PricingCompact() {
       }}
       >
         <div className={styles.pricingCompact}>
-          <h2>$9/monthly</h2>
+          <h2>9€/monthly</h2>
           <p style={{ maxWidth: '80%', textAlign: 'center' }}>
             Troosh let's you start small and grow big.
             Start learning with a base subscription,

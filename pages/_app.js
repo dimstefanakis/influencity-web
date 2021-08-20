@@ -1,4 +1,5 @@
 // import App from 'next/app'
+import Head from 'next/head';
 import LogRocket from 'logrocket';
 import Layout from '../src/flat/Layout';
 import '../styles/global.css';
@@ -8,9 +9,16 @@ LogRocket.init('troosh/troosh');
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Troosh</title>
+
+      </Head>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
 

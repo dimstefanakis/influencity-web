@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+// import { useParams } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import {
   Form, Input, Button,
 } from 'antd';
@@ -20,7 +21,8 @@ const ResetPasswordForm = () => {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState([]);
   const [status, setStatus] = useState(null);
-  const { uid, token } = useParams();
+  const router = useRouter();
+  const { uid, token } = router.query;
 
   function checkForErrors(data) {
     let newErrors = [];

@@ -1,13 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
 import Link from 'next/link';
-import { useMediaQuery } from 'react-responsive';
 import Burger from '../Burger';
 import styles from './Header.module.css';
 
 function Header() {
-  const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
-
   return (
     <div className={styles.header}>
       <div className={styles.headerContent}>

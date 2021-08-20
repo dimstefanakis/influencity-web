@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useRef } from 'react';
+import { useRef, useLayoutEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Blob, Blob2, Blob3 } from '../Blob';
 import styles from './SideBySideFeature.module.css';
@@ -9,11 +9,17 @@ const blobs = [Blob, Blob2, Blob3];
 function SideBySideFeature({
   side = 'left', title, details, image, color = '#FFD29B',
 }) {
-  const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
+  const [isMobile, setIsMobile] = useState(null);
+  // const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
+  // const isMobile = window.matchMedia('(max-width: 920px)');
+
+  useLayoutEffect(() => {
+    setIsMobile(window.matchMedia('(max-width: 920px)'));
+  }, []);
 
   return (
     <div className={`full ${styles.sideBySide}`}>
-      {side === 'right' || isMobile
+      {side === 'right' || (isMobile && isMobile.matches)
         ? (
           <>
             <FeatureDetails title={title} details={details} />
@@ -31,19 +37,27 @@ function SideBySideFeature({
 }
 
 function FeatureImage({ image, side, color }) {
-  const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
+  const [isMobile, setIsMobile] = useState(null);
+  // const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
+  // const isMobile = window.matchMedia('(max-width: 920px)');
+
+  useLayoutEffect(() => {
+    setIsMobile(window.matchMedia('(max-width: 920px)'));
+  }, []);
+
+  // const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
   const randomBlob = useRef(blobs[Math.floor(Math.random() * blobs.length)]);
   const RandomBlob = randomBlob.current;
 
   return (
-    <div className={styles.featureImageContainer}>
+    <div className="featureImageContainer">
       <div style={{ position: 'absolute', height: '100%', zIndex: -1 }}>
         <RandomBlob
-          style={{ height: '100%', transform: `scale(${isMobile ? '1' : '1.7'}) ${side === 'right' ? '' : 'rotate(100deg)'}` }}
+          style={{ height: '100%', transform: `scale(${isMobile && isMobile.matches ? '1.2' : '1.7'}) ${side === 'right' ? '' : 'rotate(100deg)'}` }}
           color={color}
         />
       </div>
-      <img src={image} className={styles.sideBySideImage} alt="feature" />
+      <img src={image} className="sideBySideImage" alt="feature" />
     </div>
   );
 }
@@ -63,7 +77,6 @@ function FeatureDetails({ title, details }) {
       <div style={{ maxWidth: 300 }}>
         <h1 style={{ fontSize: '2.4em' }}>{title}</h1>
         <p style={{ fontSize: '1.3em' }}>{details}</p>
-
       </div>
     </div>
   );
