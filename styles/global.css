@@ -55,7 +55,9 @@ h2{
 }
 
 .basic-container {
-  padding-top: 100px;
+  padding-top: 120px;
+  padding-left: 10px;
+  padding-right: 10px;
   display: flex;
   flex-flow: column;
   align-items: center;
