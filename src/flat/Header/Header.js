@@ -29,7 +29,6 @@ function Header() {
     };
   }, []);
 
-  console.log(currentUrl);
   return (
     <div className={styles.header}>
       <div className={styles.headerContent}>

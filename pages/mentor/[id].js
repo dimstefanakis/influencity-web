@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import {
   Flex, Text, Avatar, Box, Tag, Stack,
 } from '@chakra-ui/react';
+import StoreButtons from '../../src/flat/StoreButtons/StoreButtons';
 
 function MentorPage() {
   const [mentor, setMentor] = useState(null);
@@ -58,6 +59,23 @@ function MentorPage() {
                 </Box>
               ))}
             </Stack>
+          </Flex>
+          <Flex w="100%" placeItems="center" textAlign="center" mt="10" flexFlow="column">
+            <Text fontSize="lg">
+              Download Troosh to learn more about
+              {' '}
+              <Text as="b">
+                {mentor.expertise_field.toLowerCase()}
+              </Text>
+              {' '}
+              with
+              {' '}
+              <Text as="b">
+                {mentor.name}
+                !
+              </Text>
+            </Text>
+            <StoreButtons customStyle={{ marginTop: 10 }} />
           </Flex>
         </Flex>
       )}
