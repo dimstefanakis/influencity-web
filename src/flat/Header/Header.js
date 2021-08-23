@@ -1,10 +1,34 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-vars */
+import { useLayoutEffect, useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Burger from '../Burger';
 import styles from './Header.module.css';
 
 function Header() {
+  const router = useRouter();
+  const [currentUrl, setCurrentUrl] = useState(null);
+
+  useLayoutEffect(() => {
+    const handleRouteChange = (url, { shallow }) => {
+      setCurrentUrl(url);
+      console.log(
+        `App is changing to ${url} ${
+          shallow ? 'with' : 'without'
+        } shallow routing`,
+      );
+    };
+
+    router.events.on('routeChangeStart', handleRouteChange);
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+      router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, []);
+
   return (
     <div className={styles.header}>
       <div className={styles.headerContent}>
