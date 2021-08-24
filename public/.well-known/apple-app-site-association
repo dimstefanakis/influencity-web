@@ -3,7 +3,7 @@
         "apps": [],
         "details": [{
             "appID": "94R3NUTP8S.org.reactjs.native.example.influencity",
-            "paths": ["/mentor/*"]
+            "paths": ["/mentor/*", "/users/oauth/callback/"]
             }
         ]
     }
