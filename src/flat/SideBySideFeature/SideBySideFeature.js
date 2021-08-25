@@ -76,7 +76,7 @@ function FeatureDetails({ title, details }) {
     >
       <div style={{ maxWidth: 300 }}>
         <h1 style={{ fontSize: '2.4em' }}>{title}</h1>
-        <p style={{ fontSize: '1.3em' }}>{details}</p>
+        <p style={{ fontSize: '1.3em', margin: '30px 0' }}>{details}</p>
       </div>
     </div>
   );

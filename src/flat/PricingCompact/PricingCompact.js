@@ -19,7 +19,7 @@ function PricingCompact() {
             once you are sure,
             you can go even further beyond
           </p>
-          <p><b>Includes</b></p>
+          <p style={{ marginTop: 20 }}><b>Includes</b></p>
           <ul className={styles.benefitsList}>
             <li>
               Regular personalised content
