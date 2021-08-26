@@ -10,7 +10,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
           <link rel="icon" href="/favicon.ico" />
@@ -45,11 +45,6 @@ class MyDocument extends Document {
           <link
             rel="apple-app-site-association"
             href="/.well-known/apple-app-site-association"
-          />
-          <link rel="canonical" href="https://troosh.app" />
-          <meta
-            name="description"
-            content="The best place to start any skill. Start learning today with the innovative application, affordably."
           />
         </Head>
         <body>

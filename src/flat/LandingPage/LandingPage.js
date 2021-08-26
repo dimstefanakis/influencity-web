@@ -81,7 +81,7 @@ function LandingPage() {
     <div style={{ width: '100%', height: '100%' }}>
       <Head>
         <meta charSet="utf-8" />
-        <title>Troosh</title>
+        <title>Troosh - The all in one online mentoring platform</title>
         <link rel="canonical" href="https://troosh.app" />
         <meta name="description" content="The best place to start any skill. Start learning today with the innovative application, affordably." />
       </Head>
