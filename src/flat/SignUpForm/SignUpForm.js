@@ -35,14 +35,14 @@ const CustomForm = ({ status, message, onValidated }) => {
 
   return (
     <>
-      <h1
+      <h2
         id="newsletter"
         style={{
           maxWidth: 300, textAlign: 'center', margin: 60, marginBottom: 0,
         }}
       >
         Seems fun right?
-      </h1>
+      </h2>
       <p style={{
         maxWidth: 300, textAlign: 'center', margin: 60, marginTop: 10,
       }}

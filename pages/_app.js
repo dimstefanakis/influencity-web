@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Troosh</title>
+        <title>Troosh - The all in one online mentoring platform</title>
       </Head>
       <Layout>
         <Component {...pageProps} />
