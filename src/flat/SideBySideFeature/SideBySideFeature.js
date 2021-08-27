@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useRef, useLayoutEffect, useState } from 'react';
+import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
 import { Blob, Blob2, Blob3 } from '../Blob';
 import styles from './SideBySideFeature.module.css';
@@ -38,11 +39,18 @@ function SideBySideFeature({
 
 function FeatureImage({ image, side, color }) {
   const [isMobile, setIsMobile] = useState(null);
+  const [imageHeight, setImageHeight] = useState(0);
+  const [imageWidth, setImageWidth] = useState(0);
+
   // const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
   // const isMobile = window.matchMedia('(max-width: 920px)');
 
   useLayoutEffect(() => {
     setIsMobile(window.matchMedia('(max-width: 920px)'));
+  }, []);
+
+  useLayoutEffect(() => {
+    setImageHeight(window.innerHeight * 0.7);
   }, []);
 
   // const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
@@ -51,13 +59,13 @@ function FeatureImage({ image, side, color }) {
 
   return (
     <div className="featureImageContainer">
-      <div style={{ position: 'absolute', height: '100%', zIndex: -1 }}>
+      <span style={{ position: 'absolute', height: '100%', zIndex: -1 }}>
         <RandomBlob
           style={{ height: '100%', transform: `scale(${isMobile && isMobile.matches ? '1.2' : '1.7'}) ${side === 'right' ? '' : 'rotate(100deg)'}` }}
           color={color}
         />
-      </div>
-      <img src={image} className="sideBySideImage" alt="feature" />
+      </span>
+      <Image src={image} className="sideBySideImage" alt="feature" />
     </div>
   );
 }

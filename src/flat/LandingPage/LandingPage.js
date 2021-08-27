@@ -4,6 +4,7 @@
 /* eslint-disable max-len */
 import { useState, useCallback, useEffect } from 'react';
 import { useTransition, animated } from 'react-spring';
+import Image from 'next/image';
 import { Helmet } from 'react-helmet';
 import Head from 'next/head';
 import WhatWeOffer from '../WhatWeOffer/index';
@@ -18,41 +19,47 @@ import SubscribeForm from '../SignUpForm';
 import Footer from '../Footer';
 import StoreButtons from '../StoreButtons/StoreButtons';
 import styles from './LandingPage.module.css';
+import image1 from '../../../public/smartmockups_kohztffn.png';
+import image2 from '../../../public/smartmockups_koj6bllk.png';
+import image3 from '../../../public/smartmockups_koam9nna.png';
+import image4 from '../../../public/smartmockups_koj6fqdm.png';
+import image5 from '../../../public/smartmockups_koj6iivz.png';
+import image6 from '../../../public/smartmockups_koby2vkr.png';
 
-const pages = [
-  ({ style }) => (
-    <animated.div style={{
-      ...style, position: 'absolute', height: '100%', width: '100%',
-    }}
-    >
-      <img src="/6thimage.png" className={styles.imageInPhone} alt="1s" />
-    </animated.div>
-  ),
-  ({ style }) => (
-    <animated.div style={{
-      ...style, position: 'absolute', height: '100%', width: '100%',
-    }}
-    >
-      <img src="/5thimage.png" className={styles.imageInPhone} alt="1s" />
-    </animated.div>
-  ),
-  ({ style }) => (
-    <animated.div style={{
-      ...style, position: 'absolute', height: '100%', width: '100%',
-    }}
-    >
-      <img src="/3rdimage.png" className={styles.imageInPhone} alt="1s" />
-    </animated.div>
-  ),
-  ({ style }) => (
-    <animated.div style={{
-      ...style, position: 'absolute', height: '100%', width: '100%',
-    }}
-    >
-      <img src="/4thimage.png" className={styles.imageInPhone} alt="1s" />
-    </animated.div>
-  ),
-];
+// const pages = [
+//   ({ style }) => (
+//     <animated.div style={{
+//       ...style, position: 'absolute', height: '100%', width: '100%',
+//     }}
+//     >
+//       <Image src={image6} className={styles.imageInPhone} alt="1s" />
+//     </animated.div>
+//   ),
+//   ({ style }) => (
+//     <animated.div style={{
+//       ...style, position: 'absolute', height: '100%', width: '100%',
+//     }}
+//     >
+//       <Image src={image5} className={styles.imageInPhone} alt="1s" />
+//     </animated.div>
+//   ),
+//   ({ style }) => (
+//     <animated.div style={{
+//       ...style, position: 'absolute', height: '100%', width: '100%',
+//     }}
+//     >
+//       <Image src={image3} className={styles.imageInPhone} alt="1s" />
+//     </animated.div>
+//   ),
+//   ({ style }) => (
+//     <animated.div style={{
+//       ...style, position: 'absolute', height: '100%', width: '100%',
+//     }}
+//     >
+//       <Image src={image4} className={styles.imageInPhone} alt="1s" />
+//     </animated.div>
+//   ),
+// ];
 
 function LandingPage() {
   const [index, setIndex] = useState(0);
@@ -109,14 +116,14 @@ function LandingPage() {
         </button> */}
       </div>
       <BetweenHeader title="Get the most innovative learning experience" quote="Online learning requires 40-60% less time to learn" />
-      <SideBySideFeature image="/smartmockups_kohztffn.png" side="left" title="Join projects" details="Practice is the key to success. Projects let you hone your skills and get practical experience solo or on a team, with the guidance of your mentor" />
-      <SideBySideFeature image="/smartmockups_koj6bllk.png" side="right" title="Get awarded" details="Perform well and get awarded for your progess" />
-      <SideBySideFeature image="/smartmockups_koam9nna.png" side="left" title="Start small, grow big" details="Explore different mentors on a variety of dynamic skills and get started with only 9€" />
+      <SideBySideFeature image={image1} side="left" title="Join projects" details="Practice is the key to success. Projects let you hone your skills and get practical experience solo or on a team, with the guidance of your mentor" />
+      <SideBySideFeature image={image2} side="right" title="Get awarded" details="Perform well and get awarded for your progess" />
+      <SideBySideFeature image={image3} side="left" title="Start small, grow big" details="Explore different mentors on a variety of dynamic skills and get started with only 9€" />
 
       <BetweenHeader title="What's in it for mentors?" quote="The online learning industry is projected to pass $370 billion by 2026" />
-      <SideBySideFeature image="/smartmockups_koj6fqdm.png" side="right" title="Organize your thoughts in steps" color="#aaf0d1" details="Create and link multiple recourses together to create the best learning experience for your mentees" />
-      <SideBySideFeature image="/smartmockups_koj6iivz.png" side="left" title="Create projects" color="#aaf0d1" details="Help your community learn faster by creating interactive projects" />
-      <SideBySideFeature image="/smartmockups_koby2vkr.png" side="right" title="Get paid" color="#aaf0d1" details="Grow your community, grow your revenue. Gather revenue from subscriptions and project purchases" />
+      <SideBySideFeature image={image4} side="right" title="Organize your thoughts in steps" color="#aaf0d1" details="Create and link multiple recourses together to create the best learning experience for your mentees" />
+      <SideBySideFeature image={image5} side="left" title="Create projects" color="#aaf0d1" details="Help your community learn faster by creating interactive projects" />
+      <SideBySideFeature image={image6} side="right" title="Get paid" color="#aaf0d1" details="Grow your community, grow your revenue. Gather revenue from subscriptions and project purchases" />
       <PricingCompact />
       <Faq />
       {/* <div className="landing-second-container">
