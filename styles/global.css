@@ -144,8 +144,24 @@ label {
   width: 40%;
 }
 
+.featureImageContainer div{
+  position: relative !important;
+}
+
+.featureImageContainer div > div{
+  position: absolute !important;
+  height: 0;
+}
+
+
 .sideBySideImage{
-  height: 70%;
+  /* height: 70%; */
+  height: auto !important;
+  width: auto !important;
+  min-width: 200px !important;
+  min-height: 400px !important;
+  object-fit: contain;
+  position: relative !important;
   z-index: 1;
   max-height: 70vh;
 }
@@ -164,6 +180,10 @@ label {
     overflow-x: hidden;
   }
 
+  .featureImageContainer{
+    width: 100%;
+  }
+  
   .full {
     height: auto;
   }
