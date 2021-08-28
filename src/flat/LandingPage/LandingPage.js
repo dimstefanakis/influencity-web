@@ -25,7 +25,7 @@ import image3 from '../../../public/smartmockups_koam9nna.png';
 import image4 from '../../../public/smartmockups_koj6fqdm.png';
 import image5 from '../../../public/smartmockups_koj6iivz.png';
 import image6 from '../../../public/smartmockups_koby2vkr.png';
-
+import primaryImage from '../../../public/smartmockups_kohyhkmj.png';
 // const pages = [
 //   ({ style }) => (
 //     <animated.div style={{
@@ -105,7 +105,7 @@ function LandingPage() {
               </div>
             </div>
             <div className={styles.primaryImageContainer}>
-              <img src="/smartmockups_kohyhkmj.png" style={{ objectFit: 'contain', maxHeight: '80vh' }} alt="phone" />
+              <Image src={primaryImage} className={styles.primaryImage} alt="phone" />
             </div>
           </div>
         </div>
