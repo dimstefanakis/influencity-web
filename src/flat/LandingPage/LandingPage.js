@@ -91,6 +91,10 @@ function LandingPage() {
         <title>Troosh - The all in one online mentoring platform</title>
         <link rel="canonical" href="https://troosh.app" />
         <meta name="description" content="The best place to start any skill. Start learning today with the innovative application, affordably." />
+        <meta property="og:title" content="Troosh - The all in one online mentoring platform" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Learn or teach various topics, interact uniquely with peers and content creators" />
+        <meta property="og:image" content="https://troosh.app/logo_new.png" />
       </Head>
       <div className={styles.landingContainer}>
         <div className={styles.landingFull}>
