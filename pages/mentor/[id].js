@@ -35,7 +35,6 @@ function MentorPage() {
     }
   }, [id]);
 
-  console.log(mentor);
   return (
     status === 404 ? <CustomErrorPage statusCode={404} />
       : (

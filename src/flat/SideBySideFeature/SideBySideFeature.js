@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useRef, useLayoutEffect, useState } from 'react';
+import { useRef, useLayoutEffect, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
 import { Blob, Blob2, Blob3 } from '../Blob';
@@ -14,7 +14,7 @@ function SideBySideFeature({
   // const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
   // const isMobile = window.matchMedia('(max-width: 920px)');
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setIsMobile(window.matchMedia('(max-width: 920px)'));
   }, []);
 
@@ -45,11 +45,11 @@ function FeatureImage({ image, side, color }) {
   // const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
   // const isMobile = window.matchMedia('(max-width: 920px)');
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setIsMobile(window.matchMedia('(max-width: 920px)'));
   }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setImageHeight(window.innerHeight * 0.7);
   }, []);
 
