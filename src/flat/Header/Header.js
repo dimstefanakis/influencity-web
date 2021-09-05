@@ -31,7 +31,13 @@ function Header() {
         <Link href="/">
           <a style={{ color: 'black' }}>
             <div style={{ flex: 1, alignItems: 'center', display: 'flex' }}>
-              <Logo />
+              {/* <Logo /> */}
+              <img
+                src="/logo.png"
+                style={{
+                  objectFit: 'contain', width: 40, height: 40, marginRight: 10,
+                }}
+              />
               <span style={{ fontSize: '1.9rem', fontWeight: 700 }}>Troosh</span>
             </div>
           </a>
