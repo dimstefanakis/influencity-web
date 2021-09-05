@@ -33,6 +33,7 @@ function Header() {
             <div style={{ flex: 1, alignItems: 'center', display: 'flex' }}>
               {/* <Logo /> */}
               <img
+                alt="logo"
                 src="/logo.png"
                 style={{
                   objectFit: 'contain', width: 40, height: 40, marginRight: 10,
