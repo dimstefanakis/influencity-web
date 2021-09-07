@@ -163,7 +163,7 @@ label {
   object-fit: contain;
   position: relative !important;
   z-index: 1;
-  max-height: 70vh;
+  max-height: 70vh !important;
 }
 
 @media all and (max-width: 920px){
