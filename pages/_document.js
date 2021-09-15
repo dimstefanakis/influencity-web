@@ -37,6 +37,12 @@ class MyDocument extends Document {
           />
 
           {/* Crisp chat */}
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: 'window.$crisp=[];window.CRISP_WEBSITE_ID="863509f4-9c56-4fef-bec6-090a1685d404";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();',
+            }}
+          />
           {/*
             manifest.json provides metadata used when your web app is installed on a
             user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
