@@ -74,7 +74,7 @@ const CustomForm = ({ status, message, onValidated }) => {
                 type="text"
                 placeholder="Your email"
               />
-              <p style={{ marginTop: 20, textAlign: 'center' }}>What would you like to be on Troosh?</p>
+              <p style={{ marginTop: 20, marginBottom: 20, textAlign: 'center' }}>What would you like to be on Troosh?</p>
               <div onChange={(e) => setType(e.target.value)} className={styles.accountType}>
                 <div className={styles.subscribeRadio}>
                   <input type="radio" value="Mentee" name="type" id="mentee-input" />
