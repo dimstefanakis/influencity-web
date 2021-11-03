@@ -199,6 +199,15 @@ function PasswordResetChakra() {
           new_password2: values.password2,
         }),
       });
+      if (response.status === 200) {
+        toast({
+          title: 'Success',
+          description: 'Your password has been successfully reset!',
+          status: 'success',
+          duration: 9000,
+          isClosable: true,
+        });
+      }
       setStatus(response.status);
       const content = await response.json();
       checkForErrors(content);
