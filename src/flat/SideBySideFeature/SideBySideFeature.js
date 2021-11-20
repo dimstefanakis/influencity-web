@@ -1,5 +1,8 @@
 /* eslint-disable no-unused-vars */
-import { useRef, useLayoutEffect, useEffect, useState } from 'react';
+import {
+  useRef, useLayoutEffect, useEffect, useState,
+} from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useMediaQuery } from 'react-responsive';
 import { Blob, Blob2, Blob3 } from '../Blob';
@@ -7,8 +10,23 @@ import styles from './SideBySideFeature.module.css';
 
 const blobs = [Blob, Blob2, Blob3];
 
+const cardVariants = {
+  offscreen: {
+    y: 40,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 function SideBySideFeature({
-  side = 'left', title, details, image, color = '#FFD29B',
+  side = 'left',
+  title,
+  details,
+  image,
+  color = '#FFD29B',
 }) {
   const [isMobile, setIsMobile] = useState(null);
   // const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
@@ -20,19 +38,17 @@ function SideBySideFeature({
 
   return (
     <div className={`full ${styles.sideBySide}`}>
-      {side === 'right' || (isMobile && isMobile.matches)
-        ? (
-          <>
-            <FeatureDetails title={title} details={details} />
-            <FeatureImage image={image} side={side} color={color} />
-          </>
-        )
-        : (
-          <>
-            <FeatureImage image={image} side={side} color={color} />
-            <FeatureDetails title={title} details={details} />
-          </>
-        )}
+      {side === 'right' || (isMobile && isMobile.matches) ? (
+        <>
+          <FeatureDetails title={title} details={details} />
+          <FeatureImage image={image} side={side} color={color} />
+        </>
+      ) : (
+        <>
+          <FeatureImage image={image} side={side} color={color} />
+          <FeatureDetails title={title} details={details} />
+        </>
+      )}
     </div>
   );
 }
@@ -61,32 +77,43 @@ function FeatureImage({ image, side, color }) {
     <div className="featureImageContainer">
       <span style={{ position: 'absolute', height: '100%', zIndex: -1 }}>
         <RandomBlob
-          style={{ height: '100%', transform: `scale(${isMobile && isMobile.matches ? '1.2' : '1.7'}) ${side === 'right' ? '' : 'rotate(100deg)'}` }}
+          style={{
+            height: '100%',
+            transform: `scale(${
+              isMobile && isMobile.matches ? '1.2' : '1.7'
+            }) ${side === 'right' ? '' : 'rotate(100deg)'}`,
+          }}
           color={color}
         />
       </span>
-      <Image src={image} className="sideBySideImage" alt="feature" />
+      {isMobile && isMobile.matches && (
+        <Image src={image} className="sideBySideImage" alt="feature" />
+      )}
     </div>
   );
 }
 
 function FeatureDetails({ title, details }) {
   return (
-    <div style={{
-      display: 'flex',
-      width: '60%',
-      height: '100%',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexFlow: 'column',
-      zIndex: 2,
-    }}
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.5 }}
+      style={{
+        display: 'flex',
+        width: '60%',
+        height: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexFlow: 'column',
+        zIndex: 2,
+      }}
     >
-      <div style={{ maxWidth: 300 }}>
+      <motion.div variants={cardVariants} style={{ maxWidth: 300 }}>
         <h1 style={{ fontSize: '2.4em' }}>{title}</h1>
         <p style={{ fontSize: '1.3em', margin: '30px 0' }}>{details}</p>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

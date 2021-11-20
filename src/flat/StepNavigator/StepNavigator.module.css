@@ -1,0 +1,38 @@
+.motionPhoneContainer {
+  transform: translateX(15%) rotate(-4e-5deg) rotateY(15deg)
+    rotateX(9.99994deg);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  perspective: 3000px;
+}
+
+.motionPhoneContainer[data-isOn="true"] {
+  transform: translateX(calc(100% - 400px)) rotate(-4e-5deg) rotateY(-15deg)
+    rotateX(9.99994deg);
+}
+
+.motionPhoneContainer[data-isOn="true"] .motionPhoneDesign {
+  left: 80px;
+}
+
+.motionPhoneDesign {
+  position: absolute;
+  height: 90%;
+  left: -80px;
+  width: 250px;
+  box-shadow: 1px 1px 12px rgb(0 0 0 / 15%);
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.motionPhone {
+  /* height: 500px; */
+  width: 250px;
+  box-shadow: 1px 1px 12px rgb(0 0 0 / 15%);
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 12;
+}

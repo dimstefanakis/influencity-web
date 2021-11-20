@@ -1,5 +1,11 @@
 .layout{
   width: 100%;
   min-height: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+}
+
+@media all and (max-width: 920px){
+  .layout{
+    overflow-x: hidden;
+  }
 }
