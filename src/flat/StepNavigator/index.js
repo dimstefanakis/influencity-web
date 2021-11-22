@@ -11,9 +11,13 @@ import styles from './StepNavigator.module.css';
 
 const spring = {
   type: 'spring',
-  duration: 0.1,
   stiffness: 700,
-  damping: 30,
+  damping: 100,
+  // velocity: 10,
+};
+
+const transition = {
+  duration: 0.1,
 };
 
 function useScrollPosition() {
@@ -85,7 +89,7 @@ function StepNavigator() {
           position: 'sticky',
           top: 0,
           zIndex: 23123123,
-          perspective: 3000,
+          perspective: 10000,
         }}
       >
         <motion.div

@@ -1,5 +1,5 @@
 .motionPhoneContainer {
-  transform: translateX(15%) rotate(-4e-5deg) rotateY(15deg)
+  transform: translateX(15%) rotateY(15deg)
     rotateX(9.99994deg);
   height: 100vh;
   display: flex;
@@ -8,7 +8,7 @@
 }
 
 .motionPhoneContainer[data-isOn="true"] {
-  transform: translateX(calc(100% - 400px)) rotate(-4e-5deg) rotateY(-15deg)
+  transform: translateX(calc(100% - 400px)) rotateY(-15deg)
     rotateX(9.99994deg);
 }
 
@@ -18,7 +18,7 @@
 
 .motionPhoneDesign {
   position: absolute;
-  height: 90%;
+  height: 70%;
   left: -80px;
   width: 250px;
   box-shadow: 1px 1px 12px rgb(0 0 0 / 15%);
