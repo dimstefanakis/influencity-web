@@ -16,10 +16,6 @@ const spring = {
   // velocity: 10,
 };
 
-const transition = {
-  duration: 0.1,
-};
-
 function useScrollPosition() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {

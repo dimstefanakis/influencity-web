@@ -77,15 +77,25 @@
 
 .primaryImageContainer{
   display: flex;
+  justify-content: flex-start;
   height: 100%;
   width: 40%;
+  padding: 0 20px;
+}
+
+.primaryImageContainer > div{
+  overflow: initial !important;
 }
 
 .primaryImage{
-  object-fit: contain;
+  /* object-fit: contain; */
   max-height: 80vh !important;
   min-width: 80% !important;
+  min-width: auto !important;
   margin: 0 !important;
+  box-shadow: 1px 1px 12px rgb(0 0 0 / 15%);
+  border-radius: 10px;
+
 }
 
 .learn-more{
@@ -198,7 +208,7 @@
 
   .primaryImageContainer{
     width: auto;
-    margin-bottom: 50px;
+    margin: 100px 0;
   }
 
   .learn-more{

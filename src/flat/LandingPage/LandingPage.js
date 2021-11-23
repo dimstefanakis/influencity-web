@@ -26,7 +26,8 @@ import image3 from '../../../public/smartmockups_koam9nna.png';
 import image4 from '../../../public/smartmockups_koj6fqdm.png';
 import image5 from '../../../public/smartmockups_koj6iivz.png';
 import image6 from '../../../public/smartmockups_koby2vkr.png';
-import primaryImage from '../../../public/smartmockups_kohyhkmj.png';
+// import primaryImage from '../../../public/smartmockups_kohyhkmj.png';
+// import primaryImage2 from '../../../public/ios/immentee.png';
 // const pages = [
 //   ({ style }) => (
 //     <animated.div style={{
@@ -65,6 +66,16 @@ import primaryImage from '../../../public/smartmockups_kohyhkmj.png';
 function LandingPage() {
   const [index, setIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(null);
+  const [primaryImageWidth, setPrimaryImageWidth] = useState(0);
+
+  function handleWindowChange(e) {
+    const ratio = 1.332;
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowChange);
+    return window.removeEventListener('resize', handleWindowChange);
+  }, []);
 
   useEffect(() => {
     setIsMobile(window.matchMedia('(max-width: 920px)'));
@@ -127,8 +138,8 @@ function LandingPage() {
               </div>
             </div>
             <div className={styles.primaryImageContainer}>
-              <Image
-                src={primaryImage}
+              <img
+                src="/ios/immentee.webp"
                 className={styles.primaryImage}
                 alt="phone"
               />

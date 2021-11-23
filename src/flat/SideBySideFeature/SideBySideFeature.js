@@ -75,7 +75,7 @@ function FeatureImage({ image, side, color }) {
 
   return (
     <div className="featureImageContainer">
-      <span style={{ position: 'absolute', height: '100%', zIndex: -1 }}>
+      <span style={{ position: 'absolute', height: '100%', zIndex: -1, top: isMobile && isMobile.matches ? 0 : 50 }}>
         <RandomBlob
           style={{
             height: '100%',
