@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { Helmet } from 'react-helmet';
 import Head from 'next/head';
 import WhatWeOffer from '../WhatWeOffer/index';
+import StepNavigator from '../StepNavigator';
 import SideBySideFeature from '../SideBySideFeature';
 import BetweenHeader from '../BetweenHeader';
 import PrimaryPhone from '../Svgs/PrimaryPhone';
@@ -25,7 +26,8 @@ import image3 from '../../../public/smartmockups_koam9nna.png';
 import image4 from '../../../public/smartmockups_koj6fqdm.png';
 import image5 from '../../../public/smartmockups_koj6iivz.png';
 import image6 from '../../../public/smartmockups_koby2vkr.png';
-import primaryImage from '../../../public/smartmockups_kohyhkmj.png';
+// import primaryImage from '../../../public/smartmockups_kohyhkmj.png';
+// import primaryImage2 from '../../../public/ios/immentee.png';
 // const pages = [
 //   ({ style }) => (
 //     <animated.div style={{
@@ -63,6 +65,22 @@ import primaryImage from '../../../public/smartmockups_kohyhkmj.png';
 
 function LandingPage() {
   const [index, setIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(null);
+  const [primaryImageWidth, setPrimaryImageWidth] = useState(0);
+
+  function handleWindowChange(e) {
+    const ratio = 1.332;
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowChange);
+    return window.removeEventListener('resize', handleWindowChange);
+  }, []);
+
+  useEffect(() => {
+    setIsMobile(window.matchMedia('(max-width: 920px)'));
+  }, []);
+
   const onClick = useCallback(() => setIndex((state) => (state + 1) % 4), []);
 
   useEffect(() => {
@@ -90,10 +108,19 @@ function LandingPage() {
         <meta charSet="utf-8" />
         <title>Troosh - The all in one online mentoring platform</title>
         <link rel="canonical" href="https://troosh.app" />
-        <meta name="description" content="The best place to start any skill. Start learning today with the innovative application, affordably." />
-        <meta property="og:title" content="Troosh - The all in one online mentoring platform" />
+        <meta
+          name="description"
+          content="The best place to start any skill. Start learning today with the innovative application, affordably."
+        />
+        <meta
+          property="og:title"
+          content="Troosh - The all in one online mentoring platform"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content="Learn or teach various topics, interact uniquely with peers and content creators" />
+        <meta
+          property="og:description"
+          content="Learn or teach various topics, interact uniquely with peers and content creators"
+        />
         <meta property="og:image" content="https://troosh.app/logo_new.png" />
       </Head>
       <div className={styles.landingContainer}>
@@ -104,12 +131,18 @@ function LandingPage() {
                 <h1 className={styles.heroHeader}>
                   Get actual skills with team effort
                 </h1>
-                <h2 className={styles.heroSubheader}>Learn new things with your mentor or team</h2>
+                <h2 className={styles.heroSubheader}>
+                  Learn new things with your mentor or team
+                </h2>
                 <StoreButtons />
               </div>
             </div>
             <div className={styles.primaryImageContainer}>
-              <Image src={primaryImage} className={styles.primaryImage} alt="phone" />
+              <img
+                src="/ios/immentee.webp"
+                className={styles.primaryImage}
+                alt="phone"
+              />
             </div>
           </div>
         </div>
@@ -119,15 +152,57 @@ function LandingPage() {
           learn more
         </button> */}
       </div>
-      <BetweenHeader title="Get the most innovative learning experience" quote="Online learning requires 40-60% less time to learn" />
-      <SideBySideFeature image={image1} side="left" title="Join projects" details="Practice is the key to success. Projects let you hone your skills and get practical experience solo or on a team, with the guidance of your mentor" />
-      <SideBySideFeature image={image2} side="right" title="Get awarded" details="Perform well and get awarded for your progess" />
-      <SideBySideFeature image={image3} side="left" title="Start small, grow big" details="Explore different mentors on a variety of dynamic skills and get started with only 9€" />
+      {/* <BetweenHeader
+        title="Get the most innovative learning experience"
+        quote="Online learning requires 40-60% less time to learn"
+      /> */}
+      <div style={{ position: 'relative' }}>
+        {isMobile && !isMobile.matches && <StepNavigator />}
+        <SideBySideFeature
+          image={image1}
+          side="left"
+          title="Join projects"
+          details="Practice is the key to success. Projects let you hone your skills and get practical experience solo or on a team, with the guidance of your mentor"
+        />
+        <SideBySideFeature
+          image={image2}
+          side="right"
+          title="Get awarded"
+          details="Perform well and get awarded for your progess"
+        />
+        <SideBySideFeature
+          image={image3}
+          side="left"
+          title="Start small, grow big"
+          details="Explore different mentors on a variety of dynamic skills and get started with only 9€"
+        />
 
-      <BetweenHeader title="What's in it for mentors?" quote="The online learning industry is projected to pass $370 billion by 2026" />
-      <SideBySideFeature image={image4} side="right" title="Organize your thoughts in steps" color="#aaf0d1" details="Create and link multiple recourses together to create the best learning experience for your mentees" />
-      <SideBySideFeature image={image5} side="left" title="Create projects" color="#aaf0d1" details="Help your community learn faster by creating interactive projects" />
-      <SideBySideFeature image={image6} side="right" title="Get paid" color="#aaf0d1" details="Grow your community, grow your revenue. Gather revenue from subscriptions and project purchases" />
+        {/* <BetweenHeader
+          title="What's in it for mentors?"
+          quote="The online learning industry is projected to pass $370 billion by 2026"
+        /> */}
+        <SideBySideFeature
+          image={image4}
+          side="right"
+          title="Organize your thoughts in steps"
+          color="#aaf0d1"
+          details="Create and link multiple recourses together to create the best learning experience for your mentees"
+        />
+        <SideBySideFeature
+          image={image5}
+          side="left"
+          title="Create projects"
+          color="#aaf0d1"
+          details="Help your community learn faster by creating interactive projects"
+        />
+        <SideBySideFeature
+          image={image6}
+          side="right"
+          title="Get paid"
+          color="#aaf0d1"
+          details="Grow your community, grow your revenue. Gather revenue from subscriptions and project purchases"
+        />
+      </div>
       <PricingCompact />
       <Faq />
       {/* <div className="landing-second-container">
@@ -154,9 +229,14 @@ function LandingPage() {
         </div>
       </div> */}
       {/* <WhatWeOffer /> */}
-      <div style={{
-        display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', flexFlow: 'column',
-      }}
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          width: '100%',
+          flexFlow: 'column',
+        }}
       >
         <SubscribeForm />
       </div>
