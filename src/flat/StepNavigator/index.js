@@ -58,11 +58,11 @@ function StepNavigator() {
       return <Image src={image4} alt="feature" />;
     }
     if (step === 4) {
-      return <Image src={image5} alt="feature" />;
-    }
-    if (step === 5) {
       return <Image src={image6} alt="feature" />;
     }
+    // if (step === 5) {
+    //   return <Image src={image6} alt="feature" />;
+    // }
     return null;
   }
 

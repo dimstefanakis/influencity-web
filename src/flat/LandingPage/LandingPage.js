@@ -168,6 +168,7 @@ function LandingPage() {
           image={image2}
           side="right"
           title="Get awarded"
+          color="#aaf0d1"
           details="Perform well and get awarded for your progess"
         />
         <SideBySideFeature
@@ -184,22 +185,14 @@ function LandingPage() {
         <SideBySideFeature
           image={image4}
           side="right"
-          title="Organize your thoughts in steps"
+          title="Learn in steps"
           color="#aaf0d1"
-          details="Create and link multiple recourses together to create the best learning experience for your mentees"
-        />
-        <SideBySideFeature
-          image={image5}
-          side="left"
-          title="Create projects"
-          color="#aaf0d1"
-          details="Help your community learn faster by creating interactive projects"
+          details="Take things one step at a time. Mentors breakdown their thoughts for the best learning experience"
         />
         <SideBySideFeature
           image={image6}
-          side="right"
-          title="Get paid"
-          color="#aaf0d1"
+          side="left"
+          title="Are you the mentor?"
           details="Grow your community, grow your revenue. Gather revenue from subscriptions and project purchases"
         />
       </div>
