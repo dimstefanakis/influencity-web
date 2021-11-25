@@ -112,10 +112,10 @@ function LandingPage() {
             <div className={styles.heroTextContainer}>
               <div className={styles.heroInnerContainer}>
                 <h1 className={styles.heroHeader}>
-                  Get actual skills with team effort
+                  Get more skills with less effort
                 </h1>
                 <h2 className={styles.heroSubheader}>
-                  Learn new things with your mentor or team
+                  Create a more personal experience with your mentor and meet new people while learning using cutting edge features.
                 </h2>
                 <StoreButtons />
               </div>

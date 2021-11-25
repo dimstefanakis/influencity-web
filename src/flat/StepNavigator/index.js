@@ -5,7 +5,6 @@ import image1 from '../../../public/ios/im1.png';
 import image2 from '../../../public/ios/im2.png';
 import image3 from '../../../public/ios/im3.png';
 import image4 from '../../../public/ios/im4.png';
-import image5 from '../../../public/ios/im5.png';
 import image6 from '../../../public/ios/im6.png';
 import styles from './StepNavigator.module.css';
 
@@ -43,6 +42,7 @@ function StepNavigator() {
 
   const scrollPosition = useScrollPosition();
 
+  console.log(scrollPosition);
   function getCurrentPhoneFrame() {
     const step = Math.trunc(scrollPosition / height);
     if (step === 0) {
@@ -63,7 +63,7 @@ function StepNavigator() {
     // if (step === 5) {
     //   return <Image src={image6} alt="feature" />;
     // }
-    return null;
+    return <Image src={image6} alt="feature" />;
   }
 
   function getCurrentPhoneFrameKey() {
@@ -89,7 +89,7 @@ function StepNavigator() {
         }}
       >
         <motion.div
-          data-isOn={(scrollPosition / height) % 2 >= 1}
+          data-isOn={(scrollPosition / height) % 2 >= 1 && scrollPosition < 4000}
           className={styles.motionPhoneContainer}
         >
           <motion.div
