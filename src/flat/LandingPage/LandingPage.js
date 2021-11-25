@@ -7,13 +7,11 @@ import { useTransition, animated } from 'react-spring';
 import Image from 'next/image';
 import { Helmet } from 'react-helmet';
 import Head from 'next/head';
-import WhatWeOffer from '../WhatWeOffer/index';
+import { Button } from '@chakra-ui/button';
+import { Tabs, TabList, Tab } from '@chakra-ui/tabs';
+import { AnimatePresence, motion } from 'framer-motion';
 import StepNavigator from '../StepNavigator';
 import SideBySideFeature from '../SideBySideFeature';
-import BetweenHeader from '../BetweenHeader';
-import PrimaryPhone from '../Svgs/PrimaryPhone';
-import OnlineLearningIllustration from '../Svgs/OnlineLearningIllustration';
-import Pricing from '../Pricing';
 import PricingCompact from '../PricingCompact';
 import Faq from '../Faq';
 import SubscribeForm from '../SignUpForm';
@@ -64,18 +62,8 @@ import image6 from '../../../public/smartmockups_koby2vkr.png';
 // ];
 
 function LandingPage() {
-  const [index, setIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(null);
-  const [primaryImageWidth, setPrimaryImageWidth] = useState(0);
-
-  function handleWindowChange(e) {
-    const ratio = 1.332;
-  }
-
-  useEffect(() => {
-    window.addEventListener('resize', handleWindowChange);
-    return window.removeEventListener('resize', handleWindowChange);
-  }, []);
+  const [view, setView] = useState('mentee');
 
   useEffect(() => {
     setIsMobile(window.matchMedia('(max-width: 920px)'));
@@ -83,18 +71,13 @@ function LandingPage() {
 
   const onClick = useCallback(() => setIndex((state) => (state + 1) % 4), []);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((state) => (state + 1) % 4);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const transitions = useTransition(index, {
-    from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
-    enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
-    leave: { opacity: 0, transform: 'translate3d(-50%,0,0)' },
-  });
+  function onTabChange(index) {
+    if (index === 0) {
+      setView('mentee');
+    } else {
+      setView('mentor');
+    }
+  }
 
   // function handleLearnMoreClick() {
   //   window.scrollTo({
@@ -138,11 +121,45 @@ function LandingPage() {
               </div>
             </div>
             <div className={styles.primaryImageContainer}>
-              <img
-                src="/ios/immentee.webp"
-                className={styles.primaryImage}
-                alt="phone"
-              />
+              <div style={{ display: 'flex', flexFlow: 'column' }}>
+                <div>
+                  <Tabs
+                    variant="soft-rounded"
+                    colorScheme="orange"
+                    mb={5}
+                    onChange={(index) => onTabChange(index)}
+                  >
+                    <TabList>
+                      <Tab>Mentee</Tab>
+                      <Tab ml={10}>Mentor</Tab>
+                    </TabList>
+                  </Tabs>
+                </div>
+                <AnimatePresence>
+                  {view === 'mentee' && (
+                    <motion.img
+                      src="/ios/immentee.webp"
+                      className={styles.primaryImage}
+                      alt="phone"
+                      key="mentee"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0, y: 5 }}
+                    />
+                  )}
+                  {view === 'mentor' && (
+                    <motion.img
+                      src="/ios/immentor.webp"
+                      className={styles.primaryImage}
+                      alt="phone"
+                      key="mentor"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0, y: 5 }}
+                    />
+                  )}
+                </AnimatePresence>
+              </div>
             </div>
           </div>
         </div>

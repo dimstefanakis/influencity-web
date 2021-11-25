@@ -84,6 +84,8 @@
 }
 
 .primaryImageContainer > div{
+  position: relative;
+  width: 100%;
   overflow: initial !important;
 }
 
@@ -96,7 +98,8 @@
   margin: 0 !important;
   box-shadow: 1px 1px 12px rgb(0 0 0 / 15%);
   border-radius: 10px;
-
+  position: absolute;
+  top: 50px;
 }
 
 .learn-more{
@@ -157,6 +160,7 @@
 @media all and (max-width: 920px){
   .primaryImage{
     margin: auto !important;
+    height: auto !important;
   }
 
   .landingContainer{
@@ -208,8 +212,13 @@
   }
 
   .primaryImageContainer{
-    width: auto;
+    width: 100%;
+    height: 80vh;
     margin: 100px 0;
+  }
+
+  .primaryImageContainer > div{
+    align-items: center;
   }
 
   .learn-more{
