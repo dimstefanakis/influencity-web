@@ -114,7 +114,7 @@ function LandingPage() {
                 <h1 className={styles.heroHeader}>
                   Get more skills with less effort
                 </h1>
-                <h2 className={styles.heroSubheader}>
+                <h2 className={styles.heroSubheader} style={{ maxWidth: 450 }}>
                   Create a more personal experience with your mentor and meet new people while learning using cutting edge features.
                 </h2>
                 <StoreButtons />
