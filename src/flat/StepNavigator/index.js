@@ -42,7 +42,6 @@ function StepNavigator() {
 
   const scrollPosition = useScrollPosition();
 
-  console.log(scrollPosition);
   function getCurrentPhoneFrame() {
     const step = Math.trunc(scrollPosition / height);
     if (step === 0) {
