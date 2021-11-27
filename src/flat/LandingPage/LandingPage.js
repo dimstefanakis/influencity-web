@@ -14,6 +14,7 @@ import StepNavigator from '../StepNavigator';
 import SideBySideFeature from '../SideBySideFeature';
 import PricingCompact from '../PricingCompact';
 import Faq from '../Faq';
+import Advisors from '../Advisors';
 import SubscribeForm from '../SignUpForm';
 import Footer from '../Footer';
 import StoreButtons from '../StoreButtons/StoreButtons';
@@ -250,6 +251,7 @@ function LandingPage() {
       >
         <SubscribeForm />
       </div>
+      <Advisors />
       <Footer />
       {/* <Pricing /> */}
     </div>

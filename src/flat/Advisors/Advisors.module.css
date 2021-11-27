@@ -1,0 +1,23 @@
+.advisorsContainer{
+    width: 60%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.advisorImage{
+    height: 50%;
+    margin: 10px;
+}
+
+@media all and (max-width: 676px){
+    .advisorsContainer{
+        height: 200px;
+    }
+
+    .advisorImage{
+        height: 50px;
+    }
+}
