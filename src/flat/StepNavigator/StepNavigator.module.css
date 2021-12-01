@@ -25,6 +25,9 @@
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
+  border-color: #545454;
+  border-width: 3px;
+  border-style: solid;
 }
 
 .motionPhone {
@@ -35,4 +38,7 @@
   border-radius: 10px;
   overflow: hidden;
   z-index: 12;
+  border-color: #545454;
+  border-width: 3px;
+  border-style: solid;
 }
