@@ -113,10 +113,19 @@ function LandingPage() {
             <div className={styles.heroTextContainer}>
               <div className={styles.heroInnerContainer}>
                 <h1 className={styles.heroHeader}>
-                  Get more skills with less effort
+                  Get
+                  {' '}
+                  <span className={styles.alternateText}>more</span>
+                  {' '}
+                  skills with
+                  {' '}
+                  <span className={styles.alternateText}>less</span>
+                  {' '}
+                  effort
                 </h1>
                 <h2 className={styles.heroSubheader} style={{ maxWidth: 450 }}>
-                  Create a more personal experience with your mentor and meet new people while learning using cutting edge features.
+                  Create a more personal experience with your mentor and meet
+                  new people while learning using cutting edge features.
                 </h2>
                 <StoreButtons />
               </div>
