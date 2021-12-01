@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 /* eslint-disable no-unused-vars */
 import {
   useRef, useLayoutEffect, useEffect, useState,
@@ -37,7 +38,15 @@ function SideBySideFeature({
   }, []);
 
   return (
-    <div className={`full ${styles.sideBySide}`}>
+    <div
+      className={`full ${styles.sideBySide} ${
+        isMobile && isMobile.matches
+          ? side === 'right'
+            ? 'green-background'
+            : 'orange-background'
+          : ''
+      }`}
+    >
       {side === 'right' || (isMobile && isMobile.matches) ? (
         <>
           <FeatureDetails title={title} details={details} />
@@ -75,10 +84,7 @@ function FeatureImage({ image, side, color }) {
 
   return (
     <div className="featureImageContainer">
-      <span style={{
-        position: 'absolute', height: '100%', zIndex: -1, top: isMobile && isMobile.matches ? 0 : 50,
-      }}
-      >
+      <span className={styles.featureImageBlobContainer}>
         <RandomBlob
           style={{
             height: '100%',

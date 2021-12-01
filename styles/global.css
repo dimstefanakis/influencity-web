@@ -54,6 +54,14 @@ h2{
   flex-flow: row wrap;
 }
 
+.green-background{
+  background-color: #aaf0d1;
+}
+
+.orange-background{
+  background-color: #ffd29b;
+}
+
 .basic-container {
   padding-top: 120px;
   padding-left: 10px;

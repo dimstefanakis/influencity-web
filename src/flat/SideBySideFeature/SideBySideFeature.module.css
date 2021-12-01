@@ -7,6 +7,13 @@
   width: 40%;
 }
 
+.featureImageBlobContainer{
+  position: absolute;
+  height: 100%;
+  z-index: -1;
+  top: 50px;
+}
+
 .sideBySideImage{
   height: 70%;
   z-index: 1;
@@ -18,6 +25,15 @@
     flex-flow: column !important;
     align-items: center;
     text-align: center;
-    margin-top: 50px;
+    padding: 60px 0;
+  }
+
+  .featureImageBlobContainer{
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
   }
 }
