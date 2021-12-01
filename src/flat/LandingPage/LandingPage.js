@@ -25,42 +25,6 @@ import image3 from '../../../public/smartmockups_koam9nna.png';
 import image4 from '../../../public/smartmockups_koj6fqdm.png';
 import image5 from '../../../public/smartmockups_koj6iivz.png';
 import image6 from '../../../public/smartmockups_koby2vkr.png';
-// import primaryImage from '../../../public/smartmockups_kohyhkmj.png';
-// import primaryImage2 from '../../../public/ios/immentee.png';
-// const pages = [
-//   ({ style }) => (
-//     <animated.div style={{
-//       ...style, position: 'absolute', height: '100%', width: '100%',
-//     }}
-//     >
-//       <Image src={image6} className={styles.imageInPhone} alt="1s" />
-//     </animated.div>
-//   ),
-//   ({ style }) => (
-//     <animated.div style={{
-//       ...style, position: 'absolute', height: '100%', width: '100%',
-//     }}
-//     >
-//       <Image src={image5} className={styles.imageInPhone} alt="1s" />
-//     </animated.div>
-//   ),
-//   ({ style }) => (
-//     <animated.div style={{
-//       ...style, position: 'absolute', height: '100%', width: '100%',
-//     }}
-//     >
-//       <Image src={image3} className={styles.imageInPhone} alt="1s" />
-//     </animated.div>
-//   ),
-//   ({ style }) => (
-//     <animated.div style={{
-//       ...style, position: 'absolute', height: '100%', width: '100%',
-//     }}
-//     >
-//       <Image src={image4} className={styles.imageInPhone} alt="1s" />
-//     </animated.div>
-//   ),
-// ];
 
 function LandingPage() {
   const [isMobile, setIsMobile] = useState(null);
@@ -70,8 +34,6 @@ function LandingPage() {
     setIsMobile(window.matchMedia('(max-width: 920px)'));
   }, []);
 
-  const onClick = useCallback(() => setIndex((state) => (state + 1) % 4), []);
-
   function onTabChange(index) {
     if (index === 0) {
       setView('mentee');
@@ -80,12 +42,6 @@ function LandingPage() {
     }
   }
 
-  // function handleLearnMoreClick() {
-  //   window.scrollTo({
-  //     top: window.innerHeight,
-  //     behavior: 'smooth',
-  //   });
-  // }
   return (
     <div style={{ width: '100%', height: '100%' }}>
       <Head>
@@ -173,16 +129,7 @@ function LandingPage() {
             </div>
           </div>
         </div>
-        {/* <div className="landing-left" />
-        <div className="landing-right" /> */}
-        {/* <button className="learn-more cool-button" type="button" onClick={handleLearnMoreClick}>
-          learn more
-        </button> */}
       </div>
-      {/* <BetweenHeader
-        title="Get the most innovative learning experience"
-        quote="Online learning requires 40-60% less time to learn"
-      /> */}
       <div style={{ position: 'relative' }}>
         {isMobile && !isMobile.matches && <StepNavigator />}
         <SideBySideFeature
@@ -204,11 +151,6 @@ function LandingPage() {
           title="Start small, grow big"
           details="Explore different mentors on a variety of dynamic skills and get started with only 9€"
         />
-
-        {/* <BetweenHeader
-          title="What's in it for mentors?"
-          quote="The online learning industry is projected to pass $370 billion by 2026"
-        /> */}
         <SideBySideFeature
           image={image4}
           side="right"
@@ -225,30 +167,6 @@ function LandingPage() {
       </div>
       <PricingCompact />
       <Faq />
-      {/* <div className="landing-second-container">
-        <div className="online-learning-illustration-container">
-          <OnlineLearningIllustration style={{ width: '75%', maxWidth: '75%' }} />
-        </div>
-        <div className="what-is-it-about-container">
-          <div className="landing-text-content">
-            <h1>What is it about</h1>
-            <h3 style={{ fontWeight: 500 }}>
-              Troosh is a mentoring app which primarily focuses on a closer interaction
-              between role models and users. It is an innovative type of service where
-              users can join their favorite role models and have access to exclusive
-              content that would not be otherwise publicly available.
-            </h3>
-            <div className="secondary-screen-wrapper" onClick={onClick}>
-              {transitions((style, item) => {
-                const Image = pages[item];
-                return <Image style={style} />;
-              })}
-              <PrimaryPhone style={{ width: '100%', height: '70%' }} />
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* <WhatWeOffer /> */}
       <div
         style={{
           display: 'flex',
