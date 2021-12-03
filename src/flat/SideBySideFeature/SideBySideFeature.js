@@ -5,7 +5,7 @@ import {
 } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useMediaQuery } from 'react-responsive';
+import { useSelector } from 'react-redux';
 import { Blob, Blob2, Blob3 } from '../Blob';
 import styles from './SideBySideFeature.module.css';
 
@@ -21,15 +21,16 @@ const cardVariants = {
     opacity: 1,
   },
 };
-
+// #aaf0d1
 function SideBySideFeature({
   side = 'left',
   title,
   details,
   image,
-  color = '#FFD29B',
+  color,
 }) {
   const [isMobile, setIsMobile] = useState(null);
+  const { type } = useSelector((state) => state.accountType);
   // const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
   // const isMobile = window.matchMedia('(max-width: 920px)');
 
@@ -37,14 +38,22 @@ function SideBySideFeature({
     setIsMobile(window.matchMedia('(max-width: 920px)'));
   }, []);
 
+  function getBackgroundColor() {
+    if (side === 'right') {
+      if (type === 'mentee') {
+        return 'green-background';
+      }
+      return 'orange-background';
+    }
+    if (type === 'mentee') {
+      return 'orange-background';
+    }
+    return 'green-background';
+  }
   return (
     <div
       className={`full ${styles.sideBySide} ${
-        isMobile && isMobile.matches
-          ? side === 'right'
-            ? 'green-background'
-            : 'orange-background'
-          : ''
+        isMobile && isMobile.matches ? getBackgroundColor() : ''
       }`}
     >
       {side === 'right' || (isMobile && isMobile.matches) ? (
@@ -63,9 +72,23 @@ function SideBySideFeature({
 }
 
 function FeatureImage({ image, side, color }) {
+  const { type } = useSelector((state) => state.accountType);
   const [isMobile, setIsMobile] = useState(null);
   const [imageHeight, setImageHeight] = useState(0);
   const [imageWidth, setImageWidth] = useState(0);
+
+  function getColor() {
+    if (side === 'right') {
+      if (type === 'mentee') {
+        return '#aaf0d1';
+      }
+      return '#FFD29B';
+    }
+    if (type === 'mentee') {
+      return '#FFD29B';
+    }
+    return '#aaf0d1';
+  }
 
   // const isMobile = useMediaQuery({ query: '(max-width: 920px)' });
   // const isMobile = window.matchMedia('(max-width: 920px)');
@@ -92,7 +115,7 @@ function FeatureImage({ image, side, color }) {
               isMobile && isMobile.matches ? '1.2' : '1.7'
             }) ${side === 'right' ? '' : 'rotate(100deg)'}`,
           }}
-          color={color}
+          color={color || getColor()}
         />
       </span>
       {isMobile && isMobile.matches && (

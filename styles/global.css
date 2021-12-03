@@ -55,11 +55,11 @@ h2{
 }
 
 .green-background{
-  background-color: #aaf0d1;
+  background-color: #aaf0d1 !important;
 }
 
 .orange-background{
-  background-color: #ffd29b;
+  background-color: #ffd29b !important;
 }
 
 .basic-container {

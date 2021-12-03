@@ -1,8 +1,10 @@
 // import App from 'next/app'
 import Head from 'next/head';
 import { ChakraProvider } from '@chakra-ui/react';
+import { Provider } from 'react-redux';
 import LogRocket from 'logrocket';
 import Layout from '../src/flat/Layout';
+import store from '../src/store';
 import '../styles/global.css';
 import 'antd/dist/antd.css';
 
@@ -10,15 +12,17 @@ LogRocket.init('troosh/troosh');
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Troosh - The all in one online mentoring platform</title>
-      </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ChakraProvider>
+    <Provider store={store}>
+      <ChakraProvider>
+        <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>Troosh - The all in one online mentoring platform</title>
+        </Head>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ChakraProvider>
+    </Provider>
   );
 }
 

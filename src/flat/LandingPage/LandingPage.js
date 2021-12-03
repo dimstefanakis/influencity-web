@@ -10,6 +10,7 @@ import Head from 'next/head';
 import { Button } from '@chakra-ui/button';
 import { Tabs, TabList, Tab } from '@chakra-ui/tabs';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useSelector, useDispatch } from 'react-redux';
 import StepNavigator from '../StepNavigator';
 import SideBySideFeature from '../SideBySideFeature';
 import PricingCompact from '../PricingCompact';
@@ -18,6 +19,7 @@ import Advisors from '../Advisors';
 import SubscribeForm from '../SignUpForm';
 import Footer from '../Footer';
 import StoreButtons from '../StoreButtons/StoreButtons';
+import { changeType } from '../../features/AccountType/slices/accountTypeSlice';
 import styles from './LandingPage.module.css';
 import image1 from '../../../public/smartmockups_kohztffn.png';
 import image2 from '../../../public/smartmockups_koj6bllk.png';
@@ -27,8 +29,10 @@ import image5 from '../../../public/smartmockups_koj6iivz.png';
 import image6 from '../../../public/smartmockups_koby2vkr.png';
 
 function LandingPage() {
+  const dispatch = useDispatch();
   const [isMobile, setIsMobile] = useState(null);
   const [view, setView] = useState('mentee');
+  const { type } = useSelector((state) => state.accountType);
 
   useEffect(() => {
     setIsMobile(window.matchMedia('(max-width: 920px)'));
@@ -36,8 +40,10 @@ function LandingPage() {
 
   function onTabChange(index) {
     if (index === 0) {
+      dispatch(changeType('mentee'));
       setView('mentee');
     } else {
+      dispatch(changeType('mentor'));
       setView('mentor');
     }
   }
@@ -64,18 +70,38 @@ function LandingPage() {
         <meta property="og:image" content="https://troosh.app/logo_new.png" />
       </Head>
       <div className={styles.landingContainer}>
-        <div className={styles.landingFull}>
+        <div
+          className={`${styles.landingFull} ${
+            type === 'mentee' ? 'green-background' : 'orange-background'
+          }`}
+        >
           <div className={styles.heroContainer}>
             <div className={styles.heroTextContainer}>
               <div className={styles.heroInnerContainer}>
                 <h1 className={styles.heroHeader}>
                   Get
                   {' '}
-                  <span className={styles.alternateText}>more</span>
+                  <span
+                    className={`${styles.alternateText} ${
+                      type === 'mentee'
+                        ? 'orange-background'
+                        : 'green-background'
+                    }`}
+                  >
+                    more
+                  </span>
                   {' '}
                   skills with
                   {' '}
-                  <span className={styles.alternateText}>less</span>
+                  <span
+                    className={`${styles.alternateText} ${
+                      type === 'mentee'
+                        ? 'orange-background'
+                        : 'green-background'
+                    }`}
+                  >
+                    less
+                  </span>
                   {' '}
                   effort
                 </h1>
@@ -91,7 +117,7 @@ function LandingPage() {
                 <div>
                   <Tabs
                     variant="soft-rounded"
-                    colorScheme="orange"
+                    colorScheme={type === 'mentor' ? 'teal' : 'orange'}
                     mb={5}
                     onChange={(index) => onTabChange(index)}
                   >
@@ -142,7 +168,6 @@ function LandingPage() {
           image={image2}
           side="right"
           title="Get awarded"
-          color="#aaf0d1"
           details="Perform well and get awarded for your progess"
         />
         <SideBySideFeature
@@ -155,7 +180,6 @@ function LandingPage() {
           image={image4}
           side="right"
           title="Learn in steps"
-          color="#aaf0d1"
           details="Take things one step at a time. Mentors breakdown their thoughts for the best learning experience"
         />
         <SideBySideFeature
