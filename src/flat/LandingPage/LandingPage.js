@@ -168,7 +168,7 @@ function LandingPage() {
           image={image2}
           side="right"
           title="Get awarded"
-          details="Perform well and get awarded for your progess"
+          details="Perform well and get awarded for your progress"
         />
         <SideBySideFeature
           image={image3}
