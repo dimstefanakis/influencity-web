@@ -13,6 +13,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useSelector, useDispatch } from 'react-redux';
 import StepNavigator from '../StepNavigator';
 import SideBySideFeature from '../SideBySideFeature';
+import WhatIsAProject from '../WhatIsAProject';
 import PricingCompact from '../PricingCompact';
 import Faq from '../Faq';
 import Advisors from '../Advisors';
@@ -188,6 +189,9 @@ function LandingPage() {
           title="Are you the mentor?"
           details="Grow your community, grow your revenue. Gather revenue from subscriptions and project purchases"
         />
+      </div>
+      <div>
+        <WhatIsAProject />
       </div>
       <PricingCompact />
       <Faq />

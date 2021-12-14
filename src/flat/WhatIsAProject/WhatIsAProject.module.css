@@ -1,0 +1,34 @@
+.projectImage {
+  max-height: 500px;
+}
+
+.projectImageContainer {
+  border-radius: 10px;
+  border-color: #545454;
+  border-width: 3px;
+  border-style: solid;
+  height: max-content;
+  position: relative;
+  overflow: hidden;
+}
+
+.step{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 5px 20px;
+    border-radius: 100px;
+    display: inline-block;
+    max-width: 300px;
+    width: max-content;
+}
+
+.activeStep{
+
+}
+
+.stepBackground{
+    background-color: #aaf0d1;
+    position: absolute;
+    z-index: -1;
+    border-radius: 100px;
+}
