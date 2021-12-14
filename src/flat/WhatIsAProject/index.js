@@ -68,10 +68,12 @@ function WhatIsAProject() {
   }, []);
 
   useEffect(() => {
-    if (imageRef && imageRef.current) {
+    // for some reason imageWidth might stay 0 on production if [] is the dependency
+    // quick fix just run this on every render until imageWidth !== 0
+    if (imageRef && imageRef.current && imageWidth === 0) {
       setImageWidth(imageRef.current.clientWidth);
     }
-  }, [imageRef]);
+  });
 
   return (
     <div
