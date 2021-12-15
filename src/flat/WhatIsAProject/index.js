@@ -265,11 +265,11 @@ function ProjectDefinition() {
         <i>(optionally)</i>
         {' '}
         with
-        your team with the guidance of your mentor
+        your team, with the guidance of your mentor
       </p>
 
       <q style={{ marginTop: 2, color: '#646464' }}>
-        I joined a
+        I joined a fitness
         {' '}
         <b>project</b>
         {' '}
