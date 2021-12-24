@@ -1,13 +1,34 @@
-.benefitsList{
-  width: 50%;
+.benefitsList {
+  /* width: 50%; */
+  width: 80%;
   padding: 0;
+  padding-bottom: 20px;
 }
 
-.benefitsList li{
+.benefitsList li {
   margin: 5px 0;
 }
 
-.pricingCompact{
+.pricing {
+  padding: 10px;
+  margin: 10px;
+  width: 25%;
+  min-width: 300px;
+  max-width: 500px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.pricingDescription{
+  max-width: 250px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricingCompact {
   width: 50%;
   max-width: 500px;
   background-color: rgb(170, 240, 209);
@@ -20,8 +41,8 @@
   margin-bottom: 60px;
 }
 
-@media all and (max-width: 900px){
-  .pricingCompact{
+@media all and (max-width: 900px) {
+  .pricingCompact {
     width: 90%;
   }
 }

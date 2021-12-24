@@ -175,7 +175,7 @@ function LandingPage() {
           image={image3}
           side="left"
           title="Start small, grow big"
-          details="Explore different mentors on a variety of dynamic skills and get started with only 9€"
+          details="Explore different mentors on a variety of dynamic skills and get started for free"
         />
         <SideBySideFeature
           image={image4}
