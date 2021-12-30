@@ -13,9 +13,7 @@ function Advisors() {
           alignItems: 'center',
         }}
       >
-        <div
-          className={styles.advisorsContainer}
-        >
+        <div className={styles.advisorsContainer}>
           <Advisor
             to="https://orangegrove.eu/"
             src="/advisors/orangegrove.webp"
@@ -29,6 +27,11 @@ function Advisors() {
           <Advisor
             to="https://prismaconsulting.gr/"
             src="/advisors/prisma.webp"
+            alt="Prisma"
+          />
+          <Advisor
+            to="https://okthess.gr/"
+            src="/advisors/okthess.webp"
             alt="Prisma"
           />
         </div>
